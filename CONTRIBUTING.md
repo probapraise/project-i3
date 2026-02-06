@@ -10,6 +10,7 @@
 6. Merge only after all required checks pass.
 
 Direct push to `main` is blocked by repository rules.
+This also applies to workflow/config/docs changes.
 
 ## Branch Naming
 
@@ -52,6 +53,7 @@ Then review snapshot diff carefully and mention the reason in PR description.
 - Include behavior impact and risk in the PR body.
 - If schema or contract changes, update related docs/samples/tests in the same PR.
 - If CI fails, push fixes to the same PR branch and rerun checks.
+- For CI workflow edits, verify both local `make qa` and PR `Quality Gate / qa`.
 
 ## Suggested Commit Message Style
 
