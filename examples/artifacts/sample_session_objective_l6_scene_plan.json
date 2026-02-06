@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0.0",
+  "session_id": "sess_l6_0001",
+  "objective_id": "obj_l6_scene_plan",
+  "created_at": "2026-02-06T14:00:00Z",
+  "objective_name": "L6 scene planning and scenes_v2 export",
+  "success_criteria": [
+    "Build story_bible and beats",
+    "Select best scene split via score_spec_scene_split",
+    "Export scenes_v2 and pass Gate-Out"
+  ],
+  "score_spec_ref": "score_specs/score_spec_scene_split.json",
+  "policy_constraints": [
+    "Keep lock policy REAL > INFERRED > NO_INFO",
+    "Avoid explicit graphic descriptions",
+    "Use single model mapping in manual mode"
+  ]
+}

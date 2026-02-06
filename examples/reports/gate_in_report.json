@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0.0",
+  "gate": "in",
+  "manifest_path": "/home/dlwhdgus/project i3/examples/gate_in_manifest.sample.json",
+  "validated_at": "2026-02-06T03:40:02.993328+00:00",
+  "overall_status": "PASS",
+  "summary": {
+    "total": 2,
+    "passed": 2,
+    "failed": 0
+  },
+  "checks": [
+    {
+      "name": "session_input",
+      "artifact_path": "/home/dlwhdgus/project i3/examples/artifacts/sample_session_input.json",
+      "schema_path": "/home/dlwhdgus/project i3/schemas/session_input.schema.json",
+      "status": "PASS",
+      "error_count": 0,
+      "errors": []
+    },
+    {
+      "name": "topic_intake_input",
+      "artifact_path": "/home/dlwhdgus/project i3/examples/artifacts/sample_topic_intake_input.json",
+      "schema_path": "/home/dlwhdgus/project i3/schemas/topic_intake_input.schema.json",
+      "status": "PASS",
+      "error_count": 0,
+      "errors": []
+    }
+  ]
+}

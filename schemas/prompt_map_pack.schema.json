@@ -1,0 +1,220 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/prompt_map_pack.schema.json",
+  "title": "prompt_map_pack",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "session_id",
+    "objective_id",
+    "created_at",
+    "input_scenes_path",
+    "style_preset",
+    "selected_prompts",
+    "continuity_audit",
+    "quality_status"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "pattern": "^1\\.0\\.0$"
+    },
+    "session_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "objective_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "input_scenes_path": {
+      "type": "string",
+      "minLength": 1
+    },
+    "style_preset": {
+      "type": "string",
+      "minLength": 1
+    },
+    "selected_prompts": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/selected_prompt"
+      }
+    },
+    "continuity_audit": {
+      "$ref": "#/$defs/continuity_audit"
+    },
+    "quality_status": {
+      "type": "string",
+      "enum": [
+        "READY_FOR_ASSET_PIPELINE",
+        "NEEDS_PROMPT_REVIEW"
+      ]
+    }
+  },
+  "$defs": {
+    "scene_brief": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "brief_id",
+        "strategy",
+        "must_show",
+        "avoid",
+        "camera_intent",
+        "continuity_notes"
+      ],
+      "properties": {
+        "brief_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "strategy": {
+          "type": "string",
+          "minLength": 1
+        },
+        "must_show": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "avoid": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "camera_intent": {
+          "type": "string",
+          "minLength": 1
+        },
+        "continuity_notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "visual_prompt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "image_prompt",
+        "video_prompt"
+      ],
+      "properties": {
+        "image_prompt": {
+          "type": "string",
+          "minLength": 1
+        },
+        "video_prompt": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "selected_prompt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "scene_id",
+        "candidate_id",
+        "strategy",
+        "scene_brief",
+        "visual_prompt",
+        "total_score",
+        "criteria",
+        "hard_constraints",
+        "hard_pass",
+        "revised_by_continuity_auditor",
+        "revision_notes"
+      ],
+      "properties": {
+        "scene_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "candidate_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "strategy": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scene_brief": {
+          "$ref": "#/$defs/scene_brief"
+        },
+        "visual_prompt": {
+          "$ref": "#/$defs/visual_prompt"
+        },
+        "total_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "criteria": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          }
+        },
+        "hard_constraints": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "boolean"
+          }
+        },
+        "hard_pass": {
+          "type": "boolean"
+        },
+        "revised_by_continuity_auditor": {
+          "type": "boolean"
+        },
+        "revision_notes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "continuity_audit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "flagged_scene_ids",
+        "revised_scene_ids",
+        "issue_count"
+      ],
+      "properties": {
+        "flagged_scene_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "revised_scene_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "issue_count": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    }
+  }
+}

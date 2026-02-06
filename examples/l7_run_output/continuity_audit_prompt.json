@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "prompt_continuity_audit",
+  "created_at": "2026-02-06T10:46:34Z",
+  "issues": [
+    {
+      "scene_id": "scene_001",
+      "issues": [
+        "missing_primary_character"
+      ],
+      "status": "revised"
+    },
+    {
+      "scene_id": "scene_002",
+      "issues": [
+        "missing_primary_character"
+      ],
+      "status": "revised"
+    },
+    {
+      "scene_id": "scene_003",
+      "issues": [
+        "missing_primary_character"
+      ],
+      "status": "revised"
+    },
+    {
+      "scene_id": "scene_004",
+      "issues": [
+        "missing_primary_character"
+      ],
+      "status": "revised"
+    },
+    {
+      "scene_id": "scene_005",
+      "issues": [
+        "missing_primary_character"
+      ],
+      "status": "revised"
+    }
+  ],
+  "flagged_scene_ids": [
+    "scene_001",
+    "scene_002",
+    "scene_003",
+    "scene_004",
+    "scene_005"
+  ],
+  "revised_scene_ids": [
+    "scene_001",
+    "scene_002",
+    "scene_003",
+    "scene_004",
+    "scene_005"
+  ],
+  "issue_count": 5
+}

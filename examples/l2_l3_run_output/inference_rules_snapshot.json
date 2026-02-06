@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0.0",
+  "created_at": "2026-02-06T03:58:05Z",
+  "rules_path": "/home/dlwhdgus/project i3/config/inference_rules.yaml",
+  "rules": {
+    "version": "1.0.0",
+    "updated_at": "2026-02-06T00:00:00Z",
+    "defaults": {
+      "source_tag": "INFERRED"
+    },
+    "rules": {
+      "PERSON": {
+        "ethnicity": [
+          {
+            "when": {
+              "location_country_eq": "Brazil"
+            },
+            "value": "Latino/Brazilian appearance",
+            "confidence": 0.56,
+            "reason": "Case location context indicates Brazil."
+          }
+        ],
+        "hair_color": [
+          {
+            "when": {
+              "location_country_eq": "Brazil"
+            },
+            "value": "dark brown",
+            "confidence": 0.44,
+            "reason": "Default neutral appearance prior for region-level context."
+          }
+        ],
+        "hair_style": [
+          {
+            "value": "short practical style",
+            "confidence": 0.36,
+            "reason": "No explicit evidence; neutral production-safe default."
+          }
+        ],
+        "body_type": [
+          {
+            "when": {
+              "occupation_contains": [
+                "driver"
+              ]
+            },
+            "value": "average build",
+            "confidence": 0.58,
+            "reason": "Occupation context suggests non-extreme build as neutral prior."
+          },
+          {
+            "value": "average build",
+            "confidence": 0.35,
+            "reason": "No explicit evidence; neutral production-safe default."
+          }
+        ],
+        "outfit_signature": [
+          {
+            "when": {
+              "occupation_contains": [
+                "taxi"
+              ]
+            },
+            "value": "plain shirt and dark pants",
+            "confidence": 0.52,
+            "reason": "Occupation context (taxi driver) implies practical everyday attire."
+          },
+          {
+            "value": "casual neutral clothing",
+            "confidence": 0.32,
+            "reason": "No explicit evidence; neutral production-safe default."
+          }
+        ],
+        "face_signature": [
+          {
+            "value": "neutral expression with natural features",
+            "confidence": 0.3,
+            "reason": "No explicit evidence; conservative non-specific portrait prior."
+          }
+        ]
+      },
+      "LOCATION": {
+        "city": [
+          {
+            "when": {
+              "country_field_eq": "Brazil"
+            },
+            "value": "unspecified urban area in Brazil",
+            "confidence": 0.33,
+            "reason": "Country is known, city is missing."
+          }
+        ],
+        "place_type": [
+          {
+            "value": "urban street",
+            "confidence": 0.42,
+            "reason": "Neutral default scene type for crime reportage visuals."
+          }
+        ],
+        "scene_lighting": [
+          {
+            "value": "natural daylight",
+            "confidence": 0.28,
+            "reason": "No timing evidence; neutral default for clarity."
+          }
+        ],
+        "weather": [
+          {
+            "value": "clear",
+            "confidence": 0.25,
+            "reason": "No explicit weather evidence; stable baseline assumption."
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,230 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/scenes_v2.schema.json",
+  "title": "scenes_v2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "session_id",
+    "objective_id",
+    "created_at",
+    "case_id",
+    "style_preset",
+    "scenes"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "pattern": "^2\\.0\\.0$"
+    },
+    "session_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "objective_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "case_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "style_preset": {
+      "type": "string",
+      "minLength": 1
+    },
+    "global_negative_constraints": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "scenes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/scene"
+      }
+    }
+  },
+  "$defs": {
+    "scene": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "scene_id",
+        "beat_id",
+        "duration_sec",
+        "narration_text",
+        "visual_goal",
+        "character_refs",
+        "location_ref",
+        "shot_spec",
+        "action_emotion",
+        "time_weather",
+        "negative_constraints",
+        "visual_prompt"
+      ],
+      "properties": {
+        "scene_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "beat_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "duration_sec": {
+          "type": "number",
+          "minimum": 0.5
+        },
+        "narration_text": {
+          "type": "string",
+          "minLength": 1
+        },
+        "visual_goal": {
+          "type": "string",
+          "minLength": 1
+        },
+        "character_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "location_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "continuity_state": {
+          "type": "object",
+          "additionalProperties": true
+        },
+        "shot_spec": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "shot_size",
+            "camera_angle",
+            "camera_motion"
+          ],
+          "properties": {
+            "shot_size": {
+              "type": "string",
+              "enum": [
+                "EXTREME_CLOSEUP",
+                "CLOSEUP",
+                "MEDIUM",
+                "WIDE",
+                "AERIAL"
+              ]
+            },
+            "camera_angle": {
+              "type": "string",
+              "enum": [
+                "EYE_LEVEL",
+                "LOW_ANGLE",
+                "HIGH_ANGLE",
+                "DUTCH"
+              ]
+            },
+            "camera_motion": {
+              "type": "string",
+              "enum": [
+                "STATIC",
+                "HANDHELD",
+                "PAN",
+                "TILT",
+                "DOLLY",
+                "TRACKING"
+              ]
+            }
+          }
+        },
+        "action_emotion": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "action",
+            "emotion"
+          ],
+          "properties": {
+            "action": {
+              "type": "string",
+              "minLength": 1
+            },
+            "emotion": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "time_weather": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "time_of_day",
+            "weather"
+          ],
+          "properties": {
+            "time_of_day": {
+              "type": "string",
+              "enum": [
+                "DAWN",
+                "MORNING",
+                "AFTERNOON",
+                "SUNSET",
+                "NIGHT"
+              ]
+            },
+            "weather": {
+              "type": "string",
+              "enum": [
+                "CLEAR",
+                "CLOUDY",
+                "RAIN",
+                "STORM",
+                "INDOOR"
+              ]
+            }
+          }
+        },
+        "negative_constraints": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "visual_prompt": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "image_prompt",
+            "video_prompt"
+          ],
+          "properties": {
+            "image_prompt": {
+              "type": "string",
+              "minLength": 1
+            },
+            "video_prompt": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "source_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

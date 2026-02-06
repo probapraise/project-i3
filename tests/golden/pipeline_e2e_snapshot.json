@@ -1,0 +1,29 @@
+{
+  "artifact_sha256": {
+    "l1/topic_research_bundle.json": "a299a66fe61773ce31d4c91e60e787f14b28ebc0459ece7ffe078e507be9c58a",
+    "l2/entity_profile_pack.json": "d3d4b1731c68b20baff66112c81264b721c733a9d258659b2119cbb45b6741ed",
+    "l4/script_seed_pack.json": "9c11cb9ec7c4fbcc25627823ddaf52774a8e6e2213833dda7a116b017a648f83",
+    "l5/script_session_pack.json": "4f03bd54aa1ad2a3299c17707e1e6d655ce0f6db825212b7cca573bb2a8955d2",
+    "l6/scenes_v2.json": "c30a992328ef85a3c7de006ae3232b17bb0b0da70ab8dee04eac99fceed121de",
+    "l7/prompt_map_pack.json": "f34845298b5b2774c2b94d887b91cb6068706d4134e36692f848b669629f73e4",
+    "l7/scenes_v2.json": "7a2dcbd07c57fa0f1573c13c2d2c523d609a3d2ac1071f15a4e71b962b692abb",
+    "l8/clip_render_plan.json": "db3bb910995ee5a77151cc4f0226720c741416bb4bd40b2f2d5b86db13215232",
+    "l8/dubbing_plan.json": "c4d126be0267d812cd6808567e1cc91468a3fdd4709972f3f99b4c48bc452e1f",
+    "l8/sound_design_plan.json": "7dcb6f01e83c701964b1243beaae3a4398dbcd3ac86d71c45938e67f818bcbfc",
+    "l8/asset_package_manifest.json": "11be33763e316492582d529d7667d41c1a4206866f3c0b46537d5738784cf1f8"
+  },
+  "stage_summary": {
+    "l1_research_status": "READY_FOR_L2",
+    "l1_claim_count": 1,
+    "l2_profile_status": "NEEDS_HITL_REVIEW",
+    "l4_quality_status": "NEEDS_HOOK_REWORK",
+    "l4_selected_hook_id": "hook_005",
+    "l5_quality_status": "READY_FOR_SCENE_PLANNING",
+    "l5_selected_script_id": "scr_002",
+    "l6_scene_count": 5,
+    "l7_quality_status": "READY_FOR_ASSET_PIPELINE",
+    "l7_selected_prompt_count": 5,
+    "l8_quality_status": "READY_FOR_ASSET_PIPELINE",
+    "l8_clip_count": 5
+  }
+}

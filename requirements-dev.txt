@@ -1,0 +1,5 @@
+ruff>=0.9,<1.0
+mypy>=1.14,<2.0
+PyYAML>=6.0,<7.0
+types-PyYAML>=6.0,<7.0
+jsonschema>=4.23,<5.0

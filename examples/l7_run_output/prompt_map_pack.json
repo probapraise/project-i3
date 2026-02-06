@@ -1,0 +1,256 @@
+{
+  "schema_version": "1.0.0",
+  "session_id": "sess_l7_0001",
+  "objective_id": "obj_l7_prompt_map",
+  "created_at": "2026-02-06T10:46:34Z",
+  "input_scenes_path": "/home/ljhljh/project i3/examples/l6_run_output/scenes_v2.json",
+  "style_preset": "true_crime_cinematic_pt_v2",
+  "selected_prompts": [
+    {
+      "scene_id": "scene_001",
+      "candidate_id": "scene_001_prompt_002",
+      "strategy": "impact_focus",
+      "scene_brief": {
+        "brief_id": "scene_001_impact_focus",
+        "strategy": "impact_focus",
+        "must_show": [
+          "visual_goal: Deliver immediate stop-scroll tension in first seconds.",
+          "narration_cue: E se a primeira versao estivesse incompleta?",
+          "location_anchor: location_primary",
+          "primary_character: person_victim"
+        ],
+        "avoid": [
+          "explicit dismemberment details",
+          "graphic torture description",
+          "victim-blaming phrasing",
+          "no explicit gore visuals",
+          "avoid glorifying perpetrator"
+        ],
+        "camera_intent": "CLOSEUP / LOW_ANGLE / HANDHELD",
+        "continuity_notes": [
+          "next: No Brasil, o caso de um taxista parecia simples."
+        ]
+      },
+      "visual_prompt": {
+        "image_prompt": "true_crime_cinematic_pt_v2, high-contrast dramatic frame for scene_001. Create immediate scroll-stop impact around: Deliver immediate stop-scroll tension in first seconds.. Narration phrase: E se a primeira versao estivesse incompleta?. Location: location_primary. Shot: CLOSEUP LOW_ANGLE. Character anchor: person_victim.",
+        "video_prompt": "CameraMotion: HANDHELD. Action: abrupt reveal of contradiction. Emotion: shock. Start with a sharp visual reveal, then sustain suspense while preserving scene continuity."
+      },
+      "total_score": 72.6,
+      "criteria": {
+        "K3": 62.0,
+        "K1": 68.0,
+        "K2": 84.0,
+        "K4": 80.0
+      },
+      "hard_constraints": {
+        "K5": true
+      },
+      "hard_pass": true,
+      "revised_by_continuity_auditor": true,
+      "revision_notes": [
+        "missing_primary_character"
+      ]
+    },
+    {
+      "scene_id": "scene_002",
+      "candidate_id": "scene_002_prompt_002",
+      "strategy": "impact_focus",
+      "scene_brief": {
+        "brief_id": "scene_002_impact_focus",
+        "strategy": "impact_focus",
+        "must_show": [
+          "visual_goal: Establish the case context and principal characters.",
+          "narration_cue: No Brasil, o caso de um taxista parecia simples.",
+          "location_anchor: location_primary",
+          "primary_character: person_victim"
+        ],
+        "avoid": [
+          "explicit dismemberment details",
+          "graphic torture description",
+          "victim-blaming phrasing",
+          "no explicit gore visuals",
+          "avoid glorifying perpetrator"
+        ],
+        "camera_intent": "WIDE / EYE_LEVEL / PAN",
+        "continuity_notes": [
+          "prev: E se a primeira versao estivesse incompleta?",
+          "next: Registros e relatos mostraram uma contradicao na linha do tempo."
+        ]
+      },
+      "visual_prompt": {
+        "image_prompt": "true_crime_cinematic_pt_v2, high-contrast dramatic frame for scene_002. Create immediate scroll-stop impact around: Establish the case context and principal characters.. Narration phrase: No Brasil, o caso de um taxista parecia simples.. Location: location_primary. Shot: WIDE EYE_LEVEL. Character anchor: person_victim.",
+        "video_prompt": "CameraMotion: PAN. Action: establish people and place. Emotion: unease. Start with a sharp visual reveal, then sustain suspense while preserving scene continuity."
+      },
+      "total_score": 72.6,
+      "criteria": {
+        "K3": 62.0,
+        "K1": 68.0,
+        "K2": 84.0,
+        "K4": 80.0
+      },
+      "hard_constraints": {
+        "K5": true
+      },
+      "hard_pass": true,
+      "revised_by_continuity_auditor": true,
+      "revision_notes": [
+        "missing_primary_character"
+      ]
+    },
+    {
+      "scene_id": "scene_003",
+      "candidate_id": "scene_003_prompt_002",
+      "strategy": "impact_focus",
+      "scene_brief": {
+        "brief_id": "scene_003_impact_focus",
+        "strategy": "impact_focus",
+        "must_show": [
+          "visual_goal: Increase curiosity with evidence-driven progression.",
+          "narration_cue: Registros e relatos mostraram uma contradicao na linha do tempo.",
+          "location_anchor: location_primary",
+          "primary_character: person_victim"
+        ],
+        "avoid": [
+          "explicit dismemberment details",
+          "graphic torture description",
+          "victim-blaming phrasing",
+          "no explicit gore visuals",
+          "avoid glorifying perpetrator"
+        ],
+        "camera_intent": "MEDIUM / EYE_LEVEL / TRACKING",
+        "continuity_notes": [
+          "prev: No Brasil, o caso de um taxista parecia simples.",
+          "next: A evidencia final mudou a leitura do caso."
+        ]
+      },
+      "visual_prompt": {
+        "image_prompt": "true_crime_cinematic_pt_v2, high-contrast dramatic frame for scene_003. Create immediate scroll-stop impact around: Increase curiosity with evidence-driven progression.. Narration phrase: Registros e relatos mostraram uma contradicao na linha do tempo.. Location: location_primary. Shot: MEDIUM EYE_LEVEL. Character anchor: person_victim.",
+        "video_prompt": "CameraMotion: TRACKING. Action: connect clues and timeline. Emotion: suspense. Start with a sharp visual reveal, then sustain suspense while preserving scene continuity."
+      },
+      "total_score": 71.9,
+      "criteria": {
+        "K3": 68.0,
+        "K1": 58.0,
+        "K2": 84.0,
+        "K4": 80.0
+      },
+      "hard_constraints": {
+        "K5": true
+      },
+      "hard_pass": true,
+      "revised_by_continuity_auditor": true,
+      "revision_notes": [
+        "missing_primary_character"
+      ]
+    },
+    {
+      "scene_id": "scene_004",
+      "candidate_id": "scene_004_prompt_002",
+      "strategy": "impact_focus",
+      "scene_brief": {
+        "brief_id": "scene_004_impact_focus",
+        "strategy": "impact_focus",
+        "must_show": [
+          "visual_goal: Resolve contradiction with clear investigative framing.",
+          "narration_cue: A evidencia final mudou a leitura do caso.",
+          "location_anchor: location_primary",
+          "primary_character: person_victim"
+        ],
+        "avoid": [
+          "explicit dismemberment details",
+          "graphic torture description",
+          "victim-blaming phrasing",
+          "no explicit gore visuals",
+          "avoid glorifying perpetrator"
+        ],
+        "camera_intent": "CLOSEUP / HIGH_ANGLE / DOLLY",
+        "continuity_notes": [
+          "prev: Registros e relatos mostraram uma contradicao na linha do tempo.",
+          "next: Reveja a primeira frase e perceba o que mudou."
+        ]
+      },
+      "visual_prompt": {
+        "image_prompt": "true_crime_cinematic_pt_v2, high-contrast dramatic frame for scene_004. Create immediate scroll-stop impact around: Resolve contradiction with clear investigative framing.. Narration phrase: A evidencia final mudou a leitura do caso.. Location: location_primary. Shot: CLOSEUP HIGH_ANGLE. Character anchor: person_victim.",
+        "video_prompt": "CameraMotion: DOLLY. Action: confirm decisive evidence. Emotion: grim clarity. Start with a sharp visual reveal, then sustain suspense while preserving scene continuity."
+      },
+      "total_score": 70.1,
+      "criteria": {
+        "K3": 62.0,
+        "K1": 58.0,
+        "K2": 84.0,
+        "K4": 80.0
+      },
+      "hard_constraints": {
+        "K5": true
+      },
+      "hard_pass": true,
+      "revised_by_continuity_auditor": true,
+      "revision_notes": [
+        "missing_primary_character"
+      ]
+    },
+    {
+      "scene_id": "scene_005",
+      "candidate_id": "scene_005_prompt_002",
+      "strategy": "impact_focus",
+      "scene_brief": {
+        "brief_id": "scene_005_impact_focus",
+        "strategy": "impact_focus",
+        "must_show": [
+          "visual_goal: Create replay curiosity by mirroring the opening beat.",
+          "narration_cue: Reveja a primeira frase e perceba o que mudou.",
+          "location_anchor: location_primary",
+          "primary_character: person_victim"
+        ],
+        "avoid": [
+          "explicit dismemberment details",
+          "graphic torture description",
+          "victim-blaming phrasing",
+          "no explicit gore visuals",
+          "avoid glorifying perpetrator"
+        ],
+        "camera_intent": "EXTREME_CLOSEUP / DUTCH / STATIC",
+        "continuity_notes": [
+          "prev: A evidencia final mudou a leitura do caso."
+        ]
+      },
+      "visual_prompt": {
+        "image_prompt": "true_crime_cinematic_pt_v2, high-contrast dramatic frame for scene_005. Create immediate scroll-stop impact around: Create replay curiosity by mirroring the opening beat.. Narration phrase: Reveja a primeira frase e perceba o que mudou.. Location: location_primary. Shot: EXTREME_CLOSEUP DUTCH. Character anchor: person_victim.",
+        "video_prompt": "CameraMotion: STATIC. Action: echo opening line. Emotion: curiosity. Start with a sharp visual reveal, then sustain suspense while preserving scene continuity."
+      },
+      "total_score": 73.4,
+      "criteria": {
+        "K3": 73.0,
+        "K1": 58.0,
+        "K2": 84.0,
+        "K4": 80.0
+      },
+      "hard_constraints": {
+        "K5": true
+      },
+      "hard_pass": true,
+      "revised_by_continuity_auditor": true,
+      "revision_notes": [
+        "missing_primary_character"
+      ]
+    }
+  ],
+  "continuity_audit": {
+    "flagged_scene_ids": [
+      "scene_001",
+      "scene_002",
+      "scene_003",
+      "scene_004",
+      "scene_005"
+    ],
+    "revised_scene_ids": [
+      "scene_001",
+      "scene_002",
+      "scene_003",
+      "scene_004",
+      "scene_005"
+    ],
+    "issue_count": 5
+  },
+  "quality_status": "READY_FOR_ASSET_PIPELINE"
+}

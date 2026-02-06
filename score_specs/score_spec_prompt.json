@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "prompt_selection",
+  "description": "L7 Prompt 후보 선택 점수 계약",
+  "score_range": {
+    "min": 0,
+    "max": 100
+  },
+  "criteria": [
+    {
+      "id": "K3",
+      "name": "Visual Retention Potential",
+      "weight": 0.30,
+      "direction": "higher_better"
+    },
+    {
+      "id": "K1",
+      "name": "Scroll-stop Visual Impact",
+      "weight": 0.25,
+      "direction": "higher_better"
+    },
+    {
+      "id": "K2",
+      "name": "Scene Consistency",
+      "weight": 0.25,
+      "direction": "higher_better"
+    },
+    {
+      "id": "K4",
+      "name": "Prompt Controllability",
+      "weight": 0.20,
+      "direction": "higher_better"
+    }
+  ],
+  "hard_constraints": [
+    {
+      "id": "K5",
+      "name": "Policy Safety",
+      "rule": "pass_only"
+    }
+  ],
+  "selection_rule": {
+    "strategy": "top_1",
+    "min_accept_score": 72,
+    "tie_break_order": [
+      "K3",
+      "K2",
+      "K1"
+    ]
+  }
+}

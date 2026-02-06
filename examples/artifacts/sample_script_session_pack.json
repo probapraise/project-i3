@@ -1,0 +1,168 @@
+{
+  "schema_version": "1.0.0",
+  "session_id": "sess_l6_0001",
+  "objective_id": "obj_l6_scene_plan",
+  "created_at": "2026-02-06T14:00:00Z",
+  "case_id": "case_sess_l6_0001",
+  "selected_script": {
+    "script_id": "scr_001",
+    "variant": "chronological_reveal",
+    "script_text_en": "What if the first report was incomplete? In Brazil, a taxi driver case looked simple until records contradicted the timeline. Investigators checked sources and found a decisive mismatch. Final evidence reframed the case. Replay the opening line and notice what changed.",
+    "script_text_pt": "1. E se a primeira versao estivesse incompleta?\n2. No Brasil, o caso de um taxista parecia simples ate que os registros contrariaram a linha do tempo.\n3. Investigadores cruzaram fontes e acharam uma divergencia decisiva.\n4. A evidencia final reconfigurou o caso.\n5. Reveja a primeira frase e perceba o que mudou.",
+    "total_score": 79.5,
+    "criteria": {
+      "K1": 82,
+      "K3": 80,
+      "K2": 76,
+      "K4": 74
+    },
+    "hard_constraints": {
+      "K5": true
+    },
+    "hard_pass": true
+  },
+  "script_bank": [
+    {
+      "script_id": "scr_001",
+      "variant": "chronological_reveal",
+      "script_text_en": "What if the first report was incomplete? In Brazil, a taxi driver case looked simple until records contradicted the timeline. Investigators checked sources and found a decisive mismatch. Final evidence reframed the case. Replay the opening line and notice what changed.",
+      "source_claim_ids": [
+        "clm_001"
+      ]
+    },
+    {
+      "script_id": "scr_002",
+      "variant": "question_first",
+      "script_text_en": "Could one contradiction change the whole case? The early account looked stable, but verified documents kept colliding with witness notes. The conclusion was different from the first narrative.",
+      "source_claim_ids": [
+        "clm_001"
+      ]
+    }
+  ],
+  "translation_outputs": {
+    "script_refined_pt": "1. E se a primeira versao estivesse incompleta?\n2. No Brasil, o caso de um taxista parecia simples ate que os registros contrariaram a linha do tempo.\n3. Investigadores cruzaram fontes e acharam uma divergencia decisiva.\n4. A evidencia final reconfigurou o caso.\n5. Reveja a primeira frase e perceba o que mudou.",
+    "pure_narration_pt": "E se a primeira versao estivesse incompleta? No Brasil, o caso de um taxista parecia simples ate que os registros contrariaram a linha do tempo. Investigadores cruzaram fontes e acharam uma divergencia decisiva. A evidencia final reconfigurou o caso. Reveja a primeira frase e perceba o que mudou.",
+    "korean_translation": "1. [KO] 첫 보고가 불완전했다면?\n2. [KO] 브라질에서 택시기사 사건은 단순해 보였지만 기록이 타임라인과 충돌했다.\n3. [KO] 수사팀은 출처를 교차검증해 결정적 불일치를 찾았다.\n4. [KO] 최종 증거는 사건 해석을 바꿨다.\n5. [KO] 첫 문장을 다시 보면 의미가 달라진다.",
+    "structured_doc": [
+      {
+        "segment_id": "seg_001",
+        "phase": "hook",
+        "narration_pt": "E se a primeira versao estivesse incompleta?",
+        "narration_ko": "[KO] 첫 보고가 불완전했다면?",
+        "source_claim_ids": [
+          "clm_001"
+        ]
+      },
+      {
+        "segment_id": "seg_002",
+        "phase": "setup",
+        "narration_pt": "No Brasil, o caso de um taxista parecia simples.",
+        "narration_ko": "[KO] 브라질에서 택시기사 사건은 단순해 보였다.",
+        "source_claim_ids": [
+          "clm_001"
+        ]
+      },
+      {
+        "segment_id": "seg_003",
+        "phase": "build",
+        "narration_pt": "Registros e relatos mostraram uma contradicao na linha do tempo.",
+        "narration_ko": "[KO] 기록과 진술은 타임라인 충돌을 보여줬다.",
+        "source_claim_ids": [
+          "clm_001"
+        ]
+      },
+      {
+        "segment_id": "seg_004",
+        "phase": "payoff",
+        "narration_pt": "A evidencia final mudou a leitura do caso.",
+        "narration_ko": "[KO] 최종 증거가 사건 해석을 바꿨다.",
+        "source_claim_ids": [
+          "clm_001"
+        ]
+      },
+      {
+        "segment_id": "seg_005",
+        "phase": "loop",
+        "narration_pt": "Reveja a primeira frase e perceba o que mudou.",
+        "narration_ko": "[KO] 첫 문장을 다시 보면 무엇이 달라졌는지 보인다.",
+        "source_claim_ids": [
+          "clm_001"
+        ]
+      }
+    ],
+    "reconstruction_status": "AUTO_ACCEPTED"
+  },
+  "narration_only_pt": "E se a primeira versao estivesse incompleta? No Brasil, o caso de um taxista parecia simples. Registros e relatos mostraram uma contradicao na linha do tempo. A evidencia final mudou a leitura do caso. Reveja a primeira frase e perceba o que mudou.",
+  "trigger_words": [
+    "Misterio",
+    "Reviravolta",
+    "Duvida"
+  ],
+  "banned_expressions": [
+    "explicit dismemberment details",
+    "graphic torture description",
+    "victim-blaming phrasing"
+  ],
+  "policy_notes": [
+    "Use investigative framing over graphic descriptions.",
+    "Maintain victim-sensitive tone."
+  ],
+  "character_fact_registry": [
+    {
+      "entity_id": "person_victim",
+      "entity_type": "PERSON",
+      "role_label": "victim",
+      "display_name": "victim",
+      "fields": [
+        {
+          "field": "occupation",
+          "value": "taxi driver",
+          "source_tag": "REAL",
+          "sources": [
+            "src_001"
+          ]
+        },
+        {
+          "field": "gender",
+          "value": "male",
+          "source_tag": "REAL",
+          "sources": [
+            "src_001"
+          ]
+        },
+        {
+          "field": "hair_color",
+          "value": "dark brown",
+          "source_tag": "INFERRED",
+          "confidence": 0.44,
+          "reason": "neutral prior"
+        }
+      ]
+    },
+    {
+      "entity_id": "location_primary",
+      "entity_type": "LOCATION",
+      "role_label": "primary_scene",
+      "display_name": "primary_scene",
+      "fields": [
+        {
+          "field": "country",
+          "value": "Brazil",
+          "source_tag": "REAL",
+          "sources": [
+            "topic_query"
+          ]
+        },
+        {
+          "field": "city",
+          "value": "unspecified urban area",
+          "source_tag": "INFERRED",
+          "confidence": 0.33,
+          "reason": "country known but city missing"
+        }
+      ]
+    }
+  ],
+  "lock_policy": "REAL > INFERRED > NO_INFO",
+  "quality_status": "READY_FOR_SCENE_PLANNING"
+}

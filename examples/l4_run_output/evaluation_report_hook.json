@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "hook_selection",
+  "created_at": "2026-02-06T04:04:43Z",
+  "candidate_evaluations": [
+    {
+      "hook_id": "hook_001",
+      "total_score": 74.1,
+      "criteria": {
+        "K1": 90,
+        "K3": 50,
+        "K2": 68,
+        "K4": 75
+      },
+      "hard_constraints": {
+        "K5": true
+      },
+      "hard_pass": true
+    },
+    {
+      "hook_id": "hook_002",
+      "total_score": 70.55,
+      "criteria": {
+        "K1": 81,
+        "K3": 50,
+        "K2": 74,
+        "K4": 68
+      },
+      "hard_constraints": {
+        "K5": true
+      },
+      "hard_pass": true
+    },
+    {
+      "hook_id": "hook_003",
+      "total_score": 70.4,
+      "criteria": {
+        "K1": 81,
+        "K3": 59,
+        "K2": 62,
+        "K4": 68
+      },
+      "hard_constraints": {
+        "K5": true
+      },
+      "hard_pass": true
+    },
+    {
+      "hook_id": "hook_004",
+      "total_score": 75.5,
+      "criteria": {
+        "K1": 72,
+        "K3": 86,
+        "K2": 68,
+        "K4": 80
+      },
+      "hard_constraints": {
+        "K5": true
+      },
+      "hard_pass": true
+    },
+    {
+      "hook_id": "hook_005",
+      "total_score": 74.55,
+      "criteria": {
+        "K1": 81,
+        "K3": 68,
+        "K2": 68,
+        "K4": 75
+      },
+      "hard_constraints": {
+        "K5": true
+      },
+      "hard_pass": true
+    },
+    {
+      "hook_id": "hook_006",
+      "total_score": 74.8,
+      "criteria": {
+        "K1": 81,
+        "K3": 69,
+        "K2": 68,
+        "K4": 75
+      },
+      "hard_constraints": {
+        "K5": true
+      },
+      "hard_pass": true
+    }
+  ],
+  "selected_hook_id": "hook_004",
+  "min_accept_score": 75.0,
+  "pass_threshold_met": true
+}

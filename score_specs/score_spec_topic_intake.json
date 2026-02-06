@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "topic_intake",
+  "description": "L1 Topic Research 후보 선택 점수 계약",
+  "score_range": {
+    "min": 0,
+    "max": 100
+  },
+  "criteria": [
+    {
+      "id": "K1",
+      "name": "Swipe Suppression Potential",
+      "weight": 0.35,
+      "direction": "higher_better"
+    },
+    {
+      "id": "K3",
+      "name": "Retention Potential",
+      "weight": 0.30,
+      "direction": "higher_better"
+    },
+    {
+      "id": "K2",
+      "name": "Contradiction Hook Strength",
+      "weight": 0.20,
+      "direction": "higher_better"
+    },
+    {
+      "id": "K4",
+      "name": "Visual Feasibility",
+      "weight": 0.15,
+      "direction": "higher_better"
+    }
+  ],
+  "hard_constraints": [
+    {
+      "id": "K5",
+      "name": "Policy Safety",
+      "rule": "pass_only"
+    }
+  ],
+  "selection_rule": {
+    "strategy": "top_1",
+    "min_accept_score": 70,
+    "tie_break_order": [
+      "K1",
+      "K3",
+      "K2"
+    ]
+  }
+}

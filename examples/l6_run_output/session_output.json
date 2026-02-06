@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "session_id": "sess_l6_0001",
+  "objective_id": "obj_l6_scene_plan",
+  "created_at": "2026-02-06T04:46:04Z",
+  "status": "SUCCESS",
+  "output_artifact_refs": [
+    {
+      "name": "story_bible",
+      "path": "/home/dlwhdgus/project i3/examples/l6_run_output/story_bible.json"
+    },
+    {
+      "name": "beats",
+      "path": "/home/dlwhdgus/project i3/examples/l6_run_output/beats.json"
+    },
+    {
+      "name": "scene_skeletons",
+      "path": "/home/dlwhdgus/project i3/examples/l6_run_output/scene_skeletons.json"
+    },
+    {
+      "name": "scenes_v2",
+      "path": "/home/dlwhdgus/project i3/examples/l6_run_output/scenes_v2.json"
+    },
+    {
+      "name": "evaluation_report_scene_split",
+      "path": "/home/dlwhdgus/project i3/examples/l6_run_output/evaluation_report_scene_split.json"
+    },
+    {
+      "name": "selection_trace_scene_split",
+      "path": "/home/dlwhdgus/project i3/examples/l6_run_output/selection_trace_scene_split.json"
+    },
+    {
+      "name": "runtime_log_l6",
+      "path": "/home/dlwhdgus/project i3/examples/l6_run_output/runtime_log_l6.json"
+    }
+  ],
+  "metrics": {
+    "beat_count": 5,
+    "scene_candidate_count": 3,
+    "selected_candidate_id": "scene_cand_001",
+    "selected_scene_count": 5,
+    "selected_total_estimated_duration_sec": 16.54,
+    "pass_threshold_met": true
+  }
+}

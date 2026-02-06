@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "session_id": "sess_l4_0001",
+  "objective_id": "obj_l4_hook",
+  "created_at": "2026-02-06T12:30:00Z",
+  "objective_name": "L4 hook ideation and selection",
+  "success_criteria": [
+    "Generate multiple hook candidates",
+    "Evaluate with score_spec_hook",
+    "Publish script_seed_pack for L5"
+  ],
+  "score_spec_ref": "score_specs/score_spec_hook.json",
+  "policy_constraints": [
+    "Avoid explicit graphic descriptions",
+    "Respect victim-sensitive storytelling tone"
+  ]
+}

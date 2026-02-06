@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0.0",
+  "gate": "in",
+  "artifacts": [
+    {
+      "name": "session_input",
+      "artifact_path": "/home/dlwhdgus/project i3/examples/artifacts/sample_session_input_l6.json",
+      "schema_path": "/home/dlwhdgus/project i3/schemas/session_input.schema.json"
+    },
+    {
+      "name": "session_objective",
+      "artifact_path": "/home/dlwhdgus/project i3/examples/artifacts/sample_session_objective_l6_scene_plan.json",
+      "schema_path": "/home/dlwhdgus/project i3/schemas/session_objective.schema.json"
+    },
+    {
+      "name": "script_session_pack",
+      "artifact_path": "/home/dlwhdgus/project i3/examples/artifacts/sample_script_session_pack.json",
+      "schema_path": "/home/dlwhdgus/project i3/schemas/script_session_pack.schema.json"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0.0",
+  "gate": "out",
+  "artifacts": [
+    {
+      "name": "session_output",
+      "artifact_path": "/home/dlwhdgus/project i3/examples/l4_run_output/session_output.json",
+      "schema_path": "/home/dlwhdgus/project i3/schemas/session_output.schema.json"
+    },
+    {
+      "name": "script_seed_pack",
+      "artifact_path": "/home/dlwhdgus/project i3/examples/l4_run_output/script_seed_pack.json",
+      "schema_path": "/home/dlwhdgus/project i3/schemas/script_seed_pack.schema.json"
+    }
+  ]
+}

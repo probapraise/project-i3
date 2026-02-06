@@ -1,0 +1,152 @@
+{
+  "schema_version": "1.0.0",
+  "created_at": "2026-02-06T03:58:05Z",
+  "decision_count": 16,
+  "remaining_no_info_count": 4,
+  "decisions": [
+    {
+      "entity_id": "person_victim",
+      "field": "ethnicity",
+      "action": "APPLY_INCOMING",
+      "before_tag": "NO_INFO",
+      "incoming_tag": "INFERRED",
+      "after_tag": "INFERRED",
+      "reason": "TAG_UPGRADE"
+    },
+    {
+      "entity_id": "person_victim",
+      "field": "hair_style",
+      "action": "APPLY_INCOMING",
+      "before_tag": "NO_INFO",
+      "incoming_tag": "INFERRED",
+      "after_tag": "INFERRED",
+      "reason": "TAG_UPGRADE"
+    },
+    {
+      "entity_id": "person_victim",
+      "field": "hair_color",
+      "action": "APPLY_INCOMING",
+      "before_tag": "NO_INFO",
+      "incoming_tag": "INFERRED",
+      "after_tag": "INFERRED",
+      "reason": "TAG_UPGRADE"
+    },
+    {
+      "entity_id": "person_victim",
+      "field": "body_type",
+      "action": "APPLY_INCOMING",
+      "before_tag": "NO_INFO",
+      "incoming_tag": "INFERRED",
+      "after_tag": "INFERRED",
+      "reason": "TAG_UPGRADE"
+    },
+    {
+      "entity_id": "person_victim",
+      "field": "outfit_signature",
+      "action": "APPLY_INCOMING",
+      "before_tag": "NO_INFO",
+      "incoming_tag": "INFERRED",
+      "after_tag": "INFERRED",
+      "reason": "TAG_UPGRADE"
+    },
+    {
+      "entity_id": "person_victim",
+      "field": "face_signature",
+      "action": "APPLY_INCOMING",
+      "before_tag": "NO_INFO",
+      "incoming_tag": "INFERRED",
+      "after_tag": "INFERRED",
+      "reason": "TAG_UPGRADE"
+    },
+    {
+      "entity_id": "person_perpetrator",
+      "field": "ethnicity",
+      "action": "APPLY_INCOMING",
+      "before_tag": "NO_INFO",
+      "incoming_tag": "INFERRED",
+      "after_tag": "INFERRED",
+      "reason": "TAG_UPGRADE"
+    },
+    {
+      "entity_id": "person_perpetrator",
+      "field": "hair_style",
+      "action": "APPLY_INCOMING",
+      "before_tag": "NO_INFO",
+      "incoming_tag": "INFERRED",
+      "after_tag": "INFERRED",
+      "reason": "TAG_UPGRADE"
+    },
+    {
+      "entity_id": "person_perpetrator",
+      "field": "hair_color",
+      "action": "APPLY_INCOMING",
+      "before_tag": "NO_INFO",
+      "incoming_tag": "INFERRED",
+      "after_tag": "INFERRED",
+      "reason": "TAG_UPGRADE"
+    },
+    {
+      "entity_id": "person_perpetrator",
+      "field": "body_type",
+      "action": "APPLY_INCOMING",
+      "before_tag": "NO_INFO",
+      "incoming_tag": "INFERRED",
+      "after_tag": "INFERRED",
+      "reason": "TAG_UPGRADE"
+    },
+    {
+      "entity_id": "person_perpetrator",
+      "field": "outfit_signature",
+      "action": "APPLY_INCOMING",
+      "before_tag": "NO_INFO",
+      "incoming_tag": "INFERRED",
+      "after_tag": "INFERRED",
+      "reason": "TAG_UPGRADE"
+    },
+    {
+      "entity_id": "person_perpetrator",
+      "field": "face_signature",
+      "action": "APPLY_INCOMING",
+      "before_tag": "NO_INFO",
+      "incoming_tag": "INFERRED",
+      "after_tag": "INFERRED",
+      "reason": "TAG_UPGRADE"
+    },
+    {
+      "entity_id": "location_primary",
+      "field": "city",
+      "action": "APPLY_INCOMING",
+      "before_tag": "NO_INFO",
+      "incoming_tag": "INFERRED",
+      "after_tag": "INFERRED",
+      "reason": "TAG_UPGRADE"
+    },
+    {
+      "entity_id": "location_primary",
+      "field": "place_type",
+      "action": "APPLY_INCOMING",
+      "before_tag": "NO_INFO",
+      "incoming_tag": "INFERRED",
+      "after_tag": "INFERRED",
+      "reason": "TAG_UPGRADE"
+    },
+    {
+      "entity_id": "location_primary",
+      "field": "scene_lighting",
+      "action": "APPLY_INCOMING",
+      "before_tag": "NO_INFO",
+      "incoming_tag": "INFERRED",
+      "after_tag": "INFERRED",
+      "reason": "TAG_UPGRADE"
+    },
+    {
+      "entity_id": "location_primary",
+      "field": "weather",
+      "action": "APPLY_INCOMING",
+      "before_tag": "NO_INFO",
+      "incoming_tag": "INFERRED",
+      "after_tag": "INFERRED",
+      "reason": "TAG_UPGRADE"
+    }
+  ]
+}

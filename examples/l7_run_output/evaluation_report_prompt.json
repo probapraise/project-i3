@@ -1,0 +1,277 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "prompt_selection",
+  "created_at": "2026-02-06T10:46:34Z",
+  "scene_evaluations": [
+    {
+      "scene_id": "scene_001",
+      "candidate_evaluations": [
+        {
+          "candidate_id": "scene_001_prompt_001",
+          "strategy": "continuity_focus",
+          "total_score": 72.6,
+          "criteria": {
+            "K3": 62.0,
+            "K1": 68.0,
+            "K2": 84.0,
+            "K4": 80.0
+          },
+          "hard_constraints": {
+            "K5": true
+          },
+          "hard_pass": true
+        },
+        {
+          "candidate_id": "scene_001_prompt_002",
+          "strategy": "impact_focus",
+          "total_score": 72.6,
+          "criteria": {
+            "K3": 62.0,
+            "K1": 68.0,
+            "K2": 84.0,
+            "K4": 80.0
+          },
+          "hard_constraints": {
+            "K5": true
+          },
+          "hard_pass": true
+        },
+        {
+          "candidate_id": "scene_001_prompt_003",
+          "strategy": "control_focus",
+          "total_score": 71.1,
+          "criteria": {
+            "K3": 57.0,
+            "K1": 68.0,
+            "K2": 84.0,
+            "K4": 80.0
+          },
+          "hard_constraints": {
+            "K5": true
+          },
+          "hard_pass": true
+        }
+      ],
+      "selected_candidate_id": "scene_001_prompt_002",
+      "min_accept_score": 72.0,
+      "pass_threshold_met": true
+    },
+    {
+      "scene_id": "scene_002",
+      "candidate_evaluations": [
+        {
+          "candidate_id": "scene_002_prompt_001",
+          "strategy": "continuity_focus",
+          "total_score": 68.6,
+          "criteria": {
+            "K3": 62.0,
+            "K1": 52.0,
+            "K2": 84.0,
+            "K4": 80.0
+          },
+          "hard_constraints": {
+            "K5": true
+          },
+          "hard_pass": true
+        },
+        {
+          "candidate_id": "scene_002_prompt_002",
+          "strategy": "impact_focus",
+          "total_score": 72.6,
+          "criteria": {
+            "K3": 62.0,
+            "K1": 68.0,
+            "K2": 84.0,
+            "K4": 80.0
+          },
+          "hard_constraints": {
+            "K5": true
+          },
+          "hard_pass": true
+        },
+        {
+          "candidate_id": "scene_002_prompt_003",
+          "strategy": "control_focus",
+          "total_score": 67.1,
+          "criteria": {
+            "K3": 57.0,
+            "K1": 52.0,
+            "K2": 84.0,
+            "K4": 80.0
+          },
+          "hard_constraints": {
+            "K5": true
+          },
+          "hard_pass": true
+        }
+      ],
+      "selected_candidate_id": "scene_002_prompt_002",
+      "min_accept_score": 72.0,
+      "pass_threshold_met": false
+    },
+    {
+      "scene_id": "scene_003",
+      "candidate_evaluations": [
+        {
+          "candidate_id": "scene_003_prompt_001",
+          "strategy": "continuity_focus",
+          "total_score": 71.9,
+          "criteria": {
+            "K3": 73.0,
+            "K1": 52.0,
+            "K2": 84.0,
+            "K4": 80.0
+          },
+          "hard_constraints": {
+            "K5": true
+          },
+          "hard_pass": true
+        },
+        {
+          "candidate_id": "scene_003_prompt_002",
+          "strategy": "impact_focus",
+          "total_score": 71.9,
+          "criteria": {
+            "K3": 68.0,
+            "K1": 58.0,
+            "K2": 84.0,
+            "K4": 80.0
+          },
+          "hard_constraints": {
+            "K5": true
+          },
+          "hard_pass": true
+        },
+        {
+          "candidate_id": "scene_003_prompt_003",
+          "strategy": "control_focus",
+          "total_score": 70.4,
+          "criteria": {
+            "K3": 68.0,
+            "K1": 52.0,
+            "K2": 84.0,
+            "K4": 80.0
+          },
+          "hard_constraints": {
+            "K5": true
+          },
+          "hard_pass": true
+        }
+      ],
+      "selected_candidate_id": "scene_003_prompt_002",
+      "min_accept_score": 72.0,
+      "pass_threshold_met": true
+    },
+    {
+      "scene_id": "scene_004",
+      "candidate_evaluations": [
+        {
+          "candidate_id": "scene_004_prompt_001",
+          "strategy": "continuity_focus",
+          "total_score": 68.6,
+          "criteria": {
+            "K3": 62.0,
+            "K1": 52.0,
+            "K2": 84.0,
+            "K4": 80.0
+          },
+          "hard_constraints": {
+            "K5": true
+          },
+          "hard_pass": true
+        },
+        {
+          "candidate_id": "scene_004_prompt_002",
+          "strategy": "impact_focus",
+          "total_score": 70.1,
+          "criteria": {
+            "K3": 62.0,
+            "K1": 58.0,
+            "K2": 84.0,
+            "K4": 80.0
+          },
+          "hard_constraints": {
+            "K5": true
+          },
+          "hard_pass": true
+        },
+        {
+          "candidate_id": "scene_004_prompt_003",
+          "strategy": "control_focus",
+          "total_score": 67.1,
+          "criteria": {
+            "K3": 57.0,
+            "K1": 52.0,
+            "K2": 84.0,
+            "K4": 80.0
+          },
+          "hard_constraints": {
+            "K5": true
+          },
+          "hard_pass": true
+        }
+      ],
+      "selected_candidate_id": "scene_004_prompt_002",
+      "min_accept_score": 72.0,
+      "pass_threshold_met": false
+    },
+    {
+      "scene_id": "scene_005",
+      "candidate_evaluations": [
+        {
+          "candidate_id": "scene_005_prompt_001",
+          "strategy": "continuity_focus",
+          "total_score": 71.9,
+          "criteria": {
+            "K3": 73.0,
+            "K1": 52.0,
+            "K2": 84.0,
+            "K4": 80.0
+          },
+          "hard_constraints": {
+            "K5": true
+          },
+          "hard_pass": true
+        },
+        {
+          "candidate_id": "scene_005_prompt_002",
+          "strategy": "impact_focus",
+          "total_score": 73.4,
+          "criteria": {
+            "K3": 73.0,
+            "K1": 58.0,
+            "K2": 84.0,
+            "K4": 80.0
+          },
+          "hard_constraints": {
+            "K5": true
+          },
+          "hard_pass": true
+        },
+        {
+          "candidate_id": "scene_005_prompt_003",
+          "strategy": "control_focus",
+          "total_score": 70.4,
+          "criteria": {
+            "K3": 68.0,
+            "K1": 52.0,
+            "K2": 84.0,
+            "K4": 80.0
+          },
+          "hard_constraints": {
+            "K5": true
+          },
+          "hard_pass": true
+        }
+      ],
+      "selected_candidate_id": "scene_005_prompt_002",
+      "min_accept_score": 72.0,
+      "pass_threshold_met": true
+    }
+  ],
+  "overall": {
+    "scene_count": 5,
+    "pass_scene_count": 3,
+    "failed_scene_count": 2
+  }
+}

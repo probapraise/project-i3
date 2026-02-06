@@ -1,0 +1,170 @@
+쇼츠 영상 파이프라인 에이전트 맵 고도화(유동 씬 분할 + 씬 단위 비주얼 프롬프트 Map-Reduce)
+리퀘스트 문서 (Implementation Request)작성일: 2026-02-06  |  타임존: Asia/Seoul
+
+1. 배경과 목표
+현 파이프라인은 대본을 씬으로 분할하고(scene splitter), 이후 씬 기반으로 클립/더빙/사운드/패키징까지 이어지는 구조이다.
+고도화 목표는 다음 2가지이다.
+씬 개수를 고정(예: 7개)하지 않고, 대본 길이/리듬/정보량에 따라 유동적으로 5~10개(또는 그 이상/이하)로 자동 결정한다.
+LLM 호출을 ‘좁고 명확한 작업 단위’로 쪼개어(씬 1개당 1요구사항), 씬 단위 비주얼 프롬프트 품질을 끌어올리고 재작업 비용을 줄인다.
+2. 변경 요약
+기존 ‘VisualDirector(씬 분할 + 프롬프트 생성 등 복합 책임)’ 구간을 아래처럼 분해한다.
+StoryBibleBuilder: 전역 컨텍스트(톤/스타일/캐릭터 규칙/금지사항)를 압축해 재사용 가능한 단일 산출물로 만든다.
+BeatSplitter: 대본을 의미 단위(idea beat)로 분해한다.
+SceneComposer: 비트들을 시간/리듬 제약에 맞춰 묶어 ‘씬 스켈레톤’을 구성하고, 결과적으로 씬 개수 N을 자동 산출한다.
+SceneSplitCritic(+Resplit loop): 씬 길이 분포/구조 요건(Hook/Build/Payoff) 위반 여부를 평가하고 필요 시 재분할한다.
+ScenePromptOrchestrator(Map): 씬별로 SceneBriefAgent→VisualPromptAgent→PromptValidator를 반복 호출한다.
+ContinuityAuditor(Reduce): 전체 씬 프롬프트의 일관성(캐릭터/스타일/오브젝트)을 검사하고, 문제 씬만 재생성한다.
+3. 신규 에이전트 맵(텍스트 다이어그램)
+[Module1] InputOrchestrator
+   -> HookAgent (A)
+   -> ScriptAgent (B)
+   -> TranslationAgent (Writer/Critic/Reconstructor)
+   -> NarrationExtractor
+   -> ReferenceNormalizer (+ optional ImageClassifierAgent in UI path)
+
+[Scene Planning v2]
+   -> StoryBibleBuilder
+   -> BeatSplitter
+   -> SceneComposer
+   -> SceneSplitCritic  --(revise/resplit loop)--> BeatSplitter or SceneComposer
+   -> ScenesJSONBuilder (v2 schema; N is variable)
+
+[Per-Scene Prompting (Map)]
+   For each scene_i in scenes:
+      SceneContextPackager (global story_bible + scene_i + neighbor summaries)
+        -> SceneBriefAgent
+        -> VisualPromptAgent
+        -> PromptValidator
+
+[Consistency (Reduce)]
+   -> ContinuityAuditor  --(revise scene_k)--> SceneBriefAgent/VisualPromptAgent (only for flagged scenes)
+
+[Module3 Asset & Packaging]
+   -> ScriptParser (compat + export scenes.json)
+   -> ReferenceManager + CharacterTraitExtractor
+   -> SketchGenerator
+   -> ClipGenerator
+   -> DubbingDirector (updates scenes.json with audio_file)
+   -> SoundDirector
+   -> PackageGeneratorAgent
+4. 데이터 계약(Data Contracts)
+기존 scenes.json을 ‘허브 계약’으로 유지하되, 유동 씬 분할과 씬별 프롬프트 결과를 담기 위해 v2 필드를 추가한다. 기존 소비자는 선택 필드 무시로 호환 가능해야 한다.
+4.1 story_bible.json
+전역 규칙과 요약. 씬별 호출 시 항상 포함되는 최소 컨텍스트.
+{
+  "video_goal": "shorts",
+  "target_duration_sec": 45,
+  "tone": {"language": "pt", "style": "fast, punchy, clear"},
+  "global_visual_rules": {
+    "style_keywords": ["cinematic", "high contrast", "clean typography"],
+    "subtitle_rules": {"position": "bottom", "max_chars_per_line": 18}
+  },
+  "characters": [{ "id": "char_1", "name": "..." }],
+  "banned": ["graphic injury", "real-person likeness without consent"],
+  "references": {"normalized_bundle_path": "references_normalized.json"}
+}
+4.2 beats.json
+의미 단위 분해 결과(idea beats). SceneComposer가 이 비트들을 묶어 씬을 만든다.
+{
+  "beats": [
+    {"beat_id": 1, "text": "...", "role": "hook", "complexity": "low"},
+    {"beat_id": 2, "text": "...", "role": "setup"}
+  ]
+}
+4.3 scene_skeletons.json (N variable)
+유동 씬 분할의 1차 산출물. 여기서 N은 자동 산출된다.
+{
+  "scenes": [
+    {
+      "scene_id": 1,
+      "purpose": "hook",
+      "narration_text": "...",
+      "beat_ids": [1,2],
+      "estimated_duration_sec": 3.5,
+      "transition_hint": {"in": "hard_cut", "out": "whoosh"},
+      "split_reason": "new_claim + rhythm"
+    }
+  ]
+}
+4.4 scenes.json v2 (export contract)
+ScriptParser 및 후속 모듈이 읽는 최종 씬 계약. 기존 필드 유지 + v2 확장.
+{
+  "schema_version": "2.0",
+  "meta": {"target_duration_sec": 45, "scene_count": 9},
+  "scenes": [
+    {
+      "scene_id": 1,
+      "purpose": "hook",
+      "narration_text": "...",
+      "on_screen_text": ["..."],
+      "visual_brief": {"must_show": ["..."], "avoid": ["..."]},
+      "visual_prompt": {"image": "...", "video": "...", "negative": "..."},
+      "assets": {"sketch_ref": "path/to.png", "generated_clip": "path/to.mp4"},
+      "audio": {"dubbing_file": "full_dubbing.mp3", "scene_in_point_ms": 0}
+    }
+  ]
+}
+5. 씬 분할 알고리즘(권장)
+고정 N 대신 ‘제약 기반 분할’을 적용한다. 구현은 규칙 기반 + LLM 보조(BeatSplitter) 혼합을 권장한다.
+입력 파라미터(config): target_duration_sec, min_scene_sec, max_scene_sec, min_scenes, max_scenes, hook_deadline_sec(예: 3초).
+BeatSplitter: 대본을 beat 단위로 분해(각 beat는 1개 핵심 메시지).
+SceneComposer: beats를 순차로 묶되, (1) 씬 길이 예측이 max를 넘기기 직전에서 컷, (2) hook/build/payoff 비율을 맞추도록 컷 위치를 미세 조정.
+SceneSplitCritic: 길이 분포/구조 규칙 위반(너무 짧거나 긴 씬, hook이 늦음, payoff 부재 등) 확인 후 resplit 지시.
+Resplit loop: 최대 2회 반복. 실패 시 안전 폴백(기본 규칙 기반 분할)로 종료.
+6. 씬 단위 비주얼 프롬프트 생성(Map-Reduce)
+ScenePromptOrchestrator는 씬을 1개씩 좁은 범위로 호출한다. 각 호출 입력은 ‘전역 요약 + 해당 씬 + 최소 인접 맥락’만 제공한다.
+권장 호출 체인(씬 i):
+SceneContextPackager: story_bible + scene_i + neighbor summaries -> packed_context
+SceneBriefAgent: packed_context -> scene_brief[i] (화면 요소/텍스트/필수 오브젝트)
+VisualPromptAgent: scene_brief[i] (+ character_profiles) -> visual_prompt[i]
+PromptValidator: visual_prompt[i] -> issues[] or revised_prompt[i]
+7. 오케스트레이션/캐시/병렬화
+세션 아웃풋 디렉터리(pipeline/output/YYYYMMDD_*/*) 구조를 유지하되, story_bible.json, beats.json, scene_skeletons.json, scenes.json(v2) 등 중간 산출물을 저장한다.
+Map 단계(SceneBrief/Prompt/Validate)는 씬 단위 병렬 실행 가능. 단, ContinuityAuditor 이후 ‘수정 대상 씬만’ 재호출한다.
+각 단계는 입력 해시 기반 캐시(파일 존재 + 동일 입력이면 스킵)를 제공해 반복 실행 비용을 줄인다.
+8. 구현 작업 리스트(권장 순서)
+Task
+작업
+산출물/설명
+T1
+Config 도입
+shorts.yaml (target_duration_sec, min/max scene sec, min/max scenes 등)
+T2
+StoryBibleBuilder 구현
+narration_only_pt + references_normalized -> story_bible.json
+T3
+BeatSplitter 구현
+narration_only_pt + story_bible -> beats.json
+T4
+SceneComposer 구현
+beats.json + config -> scene_skeletons.json (N variable)
+T5
+SceneSplitCritic + Resplit loop
+scene_skeletons 평가/재분할(최대 2회)
+T6
+ScenesJSONBuilder v2 + ScriptParser 호환
+scene_skeletons -> scenes.json(v2) / 기존 소비자 호환
+T7
+ScenePromptOrchestrator(Map) 구현
+씬별 brief/prompt/validate 호출 + 결과를 scenes.json에 주입
+T8
+ContinuityAuditor(Reduce) 구현
+일관성 점검 후 문제 씬만 재생성
+T9
+Downstream 연결 확인
+ClipGenerator/DubbingDirector/SoundDirector/PackageGeneratorAgent가 v2 필드를 무시 또는 활용하도록 조정
+T10
+테스트/관측성
+골든 파일, 분할 회귀 테스트, 비용/토큰 로깅
+9. 수용 기준(Acceptance Criteria)
+동일 대본이라도 config에 따라 씬 개수(N)가 자동으로 달라질 수 있으며, min/max 제약을 위반하지 않는다.
+씬 분할 결과는 scene_skeletons.json에 split_reason 및 estimated_duration_sec를 포함한다.
+씬별 비주얼 프롬프트는 scenes.json(v2) 각 scene에 저장되며, ContinuityAuditor가 문제 씬만 재생성할 수 있다.
+기존 downstream(클립/더빙/사운드/패키징)은 scenes.json(v2)에서 필요한 필드만 사용하며, 추가 필드로 인해 실패하지 않는다.
+10. 테스트 플랜(요약)
+Unit: BeatSplitter 출력 스키마 검증, SceneComposer 제약 준수(min/max sec, hook_deadline).
+Golden: 3~5개 대표 대본에 대해 scenes.json(v2) 스냅샷 비교(회귀 테스트).
+Integration: ProductionPipeline end-to-end 실행(옵션 --no-* 플래그 포함)에서 중간 산출물 생성/재사용 확인.
+Cost/Latency: 씬 수 증가 시 LLM 호출 수/비용이 선형 증가하므로, 병렬도/캐시 정책으로 상한 관리.
+
+끝.

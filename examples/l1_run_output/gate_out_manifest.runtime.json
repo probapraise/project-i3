@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0.0",
+  "gate": "out",
+  "artifacts": [
+    {
+      "name": "session_output",
+      "artifact_path": "/home/dlwhdgus/project i3/examples/l1_run_output/session_output.json",
+      "schema_path": "/home/dlwhdgus/project i3/schemas/session_output.schema.json"
+    },
+    {
+      "name": "topic_research_bundle",
+      "artifact_path": "/home/dlwhdgus/project i3/examples/l1_run_output/topic_research_bundle.json",
+      "schema_path": "/home/dlwhdgus/project i3/schemas/topic_research_bundle.schema.json"
+    }
+  ]
+}

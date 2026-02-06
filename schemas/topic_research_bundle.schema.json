@@ -1,0 +1,211 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "schemas/topic_research_bundle.schema.json",
+  "title": "topic_research_bundle",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "session_id",
+    "objective_id",
+    "created_at",
+    "topic_query",
+    "normalized_sources",
+    "claims",
+    "visual_assets",
+    "research_status"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "pattern": "^1\\.0\\.0$"
+    },
+    "session_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "objective_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "topic_query": {
+      "type": "string",
+      "minLength": 3
+    },
+    "normalized_sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "source_id",
+          "url",
+          "source_name",
+          "source_type",
+          "credibility_tier"
+        ],
+        "properties": {
+          "source_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "source_name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "publisher": {
+            "type": "string"
+          },
+          "country": {
+            "type": "string"
+          },
+          "language": {
+            "type": "string"
+          },
+          "published_at": {
+            "type": "string"
+          },
+          "source_type": {
+            "type": "string",
+            "enum": [
+              "NEWS",
+              "COURT_RECORD",
+              "POLICE_RELEASE",
+              "SNS",
+              "VIDEO_PLATFORM",
+              "OTHER"
+            ]
+          },
+          "credibility_tier": {
+            "type": "string",
+            "enum": [
+              "HIGH",
+              "MEDIUM",
+              "LOW",
+              "UNKNOWN"
+            ]
+          }
+        }
+      }
+    },
+    "claims": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "claim_id",
+          "claim_text",
+          "verification_status",
+          "supporting_source_ids"
+        ],
+        "properties": {
+          "claim_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "claim_text": {
+            "type": "string",
+            "minLength": 1
+          },
+          "verification_status": {
+            "type": "string",
+            "enum": [
+              "VERIFIED",
+              "PARTIALLY_VERIFIED",
+              "CONFLICTED",
+              "UNVERIFIED",
+              "FALSE"
+            ]
+          },
+          "supporting_source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "conflicting_source_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "visual_assets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "asset_id",
+          "asset_type",
+          "availability"
+        ],
+        "properties": {
+          "asset_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "asset_type": {
+            "type": "string",
+            "enum": [
+              "CCTV",
+              "MUGSHOT",
+              "COURT_VIDEO",
+              "SCENE_PHOTO",
+              "SNS_POST",
+              "NEWS_STILL",
+              "INTERVIEW_VIDEO",
+              "OTHER"
+            ]
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "description": {
+            "type": "string"
+          },
+          "availability": {
+            "type": "string",
+            "enum": [
+              "CONFIRMED",
+              "PROBABLE",
+              "UNKNOWN",
+              "UNAVAILABLE"
+            ]
+          }
+        }
+      }
+    },
+    "unresolved_questions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "research_status": {
+      "type": "string",
+      "enum": [
+        "READY_FOR_L2",
+        "NEEDS_MORE_RESEARCH",
+        "BLOCKED"
+      ]
+    }
+  }
+}

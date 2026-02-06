@@ -1,0 +1,23 @@
+메인 파이프라인 에이전트 맵 (Module1 → Module3)
+InputOrchestrator (CLI/서버 입력 수집)Input: case_report_file 또는 case_report_text, references_file(선택)Output: case_report_text, reference_payload_inputFiles: case_report_from_ui.txt, references_input.json
+HookAgent (Agent A, agents.py)Input: case_report_textOutput: hooks_raw_text, hooks_listFiles: agent_a_hooks.txt
+ScriptAgent (Agent B, agents.py)Input: selected_hook_text, case_report_textOutput: script_draft_docFiles: agent_b_initial_draft.txt
+TranslationAgent.Writer (Module2, agent.py)Input: script_draft_docOutput: script_refined_pt
+TranslationAgent.Critic (Module2, agent.py)Input: script_draft_doc, script_refined_ptOutput: pure_narration_pt, structured_doc, korean_translationFiles: review_this_portuguese.txt, structured_production_doc.txt, refinement_log.txt
+TranslationAgent.Reconstructor (사용자 편집 반영)Input: structured_doc, edited_portuguese_ptOutput: structured_doc_updated, korean_translation_updatedFiles: structured_production_doc.txt, final_portuguese_script.txt
+NarrationExtractor (main.py)Input: structured_doc (+ fallback pure_narration_pt)Output: narration_only_ptFiles: module2_narration_only.txt
+ReferenceNormalizer (reference_schema.py)Input: reference_payload_inputOutput: reference_bundle_normalizedFiles: references_normalized.json
+VisualDirector (Scene Splitter, narration_adapter.py)Input: narration_only_pt, reference_bundle_normalizedOutput: scenes_jsonFiles: scenes_from_narration.json
+ScriptParser (script_parser.py)Input: scenes_json 또는 원시 스크립트Output: scenes_list(메모리), scenes_json_exportFiles: scenes.json
+ReferenceManager + CharacterTraitExtractor (reference_manager.py)Input: scenes_list, reference_bundle_normalized, reference_images/text_hintsOutput: character_profilesFiles: character_profiles.json
+SketchGenerator (sketch_generator.py)Input: character_profilesOutput: sketch_imagesFiles: *.png
+ClipGenerator (scene_generator.py)Input: scenes_list, sketch_imagesOutput: clip_videos, hook_guide_textFiles: *.mp4, hook_guide.txt
+DubbingDirector (dubbing_director.py)Input: scenes_json_exportOutput: full_dubbing_audio, scenes_json_export(audio_file 포함으로 갱신)Files: full_dubbing.mp3, scenes.json
+SoundDirector (sound_director.py)Input: scenes_json_exportOutput: audio_guide_md, sfx_filesFiles: audio_guide.md, pipeline/module3/assets/output/audio/sfx/*
+PackageGeneratorAgent (package_generator.py)Input: scenes_list, audio_guide_md, hook_metadataOutput: youtube_metadata, editing_guide, review_scriptFiles: youtube_metadata.json, youtube_metadata.md, editing_guide_detailed.md, typo_review_script.md
+ProductionPipeline (전체 오케스트레이션, main.py)Input: scenes_json + 옵션(--references, --no-*)Output: session_output_bundleFiles: pipeline/output/YYYYMMDD_*/* (최종 정리 결과)
+UI 경로에서 이미지 분류 에이전트ImageClassifierAgent (image_classifier.py)Input: reference_image, case_report_textOutput: image_classificationFiles: pipeline/module1/uploads/images/* (저장 경로), 결과는 세션 메모리에 저장
+Module2 데이터 인제스천(별도 파이프라인)
+ChannelDiscovery (channel_discovery.py)Input: channels.jsonOutput: video_list
+CommentFetcher (comment_fetcher.py)Input: video_url, category_idOutput: comments_jsonFiles: *.json
+TranscriptFetcher (transcript_fetcher.py)Input: video_id, category_idOutput: transcript_json, transcript_text

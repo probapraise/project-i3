@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0.0",
+  "session_id": "sess_l1_0001",
+  "objective_id": "obj_l1_research",
+  "created_at": "2026-02-06T03:45:57Z",
+  "claims": [
+    {
+      "claim_id": "clm_001",
+      "claim_text": "Initial report from user collection",
+      "verification_status": "VERIFIED",
+      "supporting_source_ids": [
+        "src_001"
+      ]
+    }
+  ],
+  "summary": {
+    "total": 1,
+    "verified": 1,
+    "partially_verified": 0,
+    "unverified": 0
+  }
+}

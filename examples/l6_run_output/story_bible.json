@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "session_id": "sess_l6_0001",
+  "objective_id": "obj_l6_scene_plan",
+  "created_at": "2026-02-06T04:46:04Z",
+  "video_goal": "shorts",
+  "target_duration_sec": 45.0,
+  "tone": {
+    "language": "pt",
+    "style": "fast, punchy, clear"
+  },
+  "global_visual_rules": {
+    "style_keywords": [
+      "cinematic",
+      "high contrast",
+      "investigative",
+      "clean typography"
+    ],
+    "subtitle_rules": {
+      "position": "bottom",
+      "max_chars_per_line": 18
+    }
+  },
+  "characters": [
+    {
+      "id": "person_victim",
+      "name": "victim",
+      "role_label": "victim",
+      "salient_facts": [
+        "occupation: taxi driver",
+        "gender: male",
+        "hair_color: dark brown"
+      ]
+    }
+  ],
+  "banned": [
+    "explicit dismemberment details",
+    "graphic torture description",
+    "victim-blaming phrasing"
+  ],
+  "references": {
+    "trigger_words": [
+      "Misterio",
+      "Reviravolta",
+      "Duvida"
+    ],
+    "lock_policy": "REAL > INFERRED > NO_INFO",
+    "script_id": "scr_001"
+  }
+}

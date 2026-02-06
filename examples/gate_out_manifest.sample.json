@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0.0",
+  "gate": "out",
+  "artifacts": [
+    {
+      "name": "session_output",
+      "artifact_path": "artifacts/sample_session_output.json",
+      "schema_path": "../schemas/session_output.schema.json"
+    },
+    {
+      "name": "topic_research_bundle",
+      "artifact_path": "artifacts/sample_topic_research_bundle.json",
+      "schema_path": "../schemas/topic_research_bundle.schema.json"
+    }
+  ]
+}

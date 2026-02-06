@@ -1,0 +1,254 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "scene_split",
+  "created_at": "2026-02-06T04:46:04Z",
+  "candidates": [
+    {
+      "candidate_id": "scene_cand_001",
+      "strategy": "per_beat",
+      "scene_count": 5,
+      "total_estimated_duration_sec": 16.54,
+      "scenes": [
+        {
+          "scene_id": "scene_001",
+          "purpose": "hook",
+          "narration_text": "E se a primeira versao estivesse incompleta?",
+          "beat_ids": [
+            "beat_001"
+          ],
+          "estimated_duration_sec": 2.69,
+          "transition_hint": {
+            "in": "hard_cut",
+            "out": "whoosh"
+          },
+          "split_reason": "beat_boundary",
+          "source_claim_ids": [
+            "clm_001"
+          ]
+        },
+        {
+          "scene_id": "scene_002",
+          "purpose": "setup",
+          "narration_text": "No Brasil, o caso de um taxista parecia simples.",
+          "beat_ids": [
+            "beat_002"
+          ],
+          "estimated_duration_sec": 3.46,
+          "transition_hint": {
+            "in": "match_cut",
+            "out": "whoosh"
+          },
+          "split_reason": "beat_boundary",
+          "source_claim_ids": [
+            "clm_001"
+          ]
+        },
+        {
+          "scene_id": "scene_003",
+          "purpose": "build",
+          "narration_text": "Registros e relatos mostraram uma contradicao na linha do tempo.",
+          "beat_ids": [
+            "beat_003"
+          ],
+          "estimated_duration_sec": 3.85,
+          "transition_hint": {
+            "in": "match_cut",
+            "out": "whoosh"
+          },
+          "split_reason": "beat_boundary",
+          "source_claim_ids": [
+            "clm_001"
+          ]
+        },
+        {
+          "scene_id": "scene_004",
+          "purpose": "payoff",
+          "narration_text": "A evidencia final mudou a leitura do caso.",
+          "beat_ids": [
+            "beat_004"
+          ],
+          "estimated_duration_sec": 3.08,
+          "transition_hint": {
+            "in": "match_cut",
+            "out": "whoosh"
+          },
+          "split_reason": "beat_boundary",
+          "source_claim_ids": [
+            "clm_001"
+          ]
+        },
+        {
+          "scene_id": "scene_005",
+          "purpose": "loop",
+          "narration_text": "Reveja a primeira frase e perceba o que mudou.",
+          "beat_ids": [
+            "beat_005"
+          ],
+          "estimated_duration_sec": 3.46,
+          "transition_hint": {
+            "in": "match_cut",
+            "out": "fade_out"
+          },
+          "split_reason": "beat_boundary",
+          "source_claim_ids": [
+            "clm_001"
+          ]
+        }
+      ]
+    },
+    {
+      "candidate_id": "scene_cand_002",
+      "strategy": "hook_pair",
+      "scene_count": 3,
+      "total_estimated_duration_sec": 16.54,
+      "scenes": [
+        {
+          "scene_id": "scene_001",
+          "purpose": "hook",
+          "narration_text": "E se a primeira versao estivesse incompleta?",
+          "beat_ids": [
+            "beat_001"
+          ],
+          "estimated_duration_sec": 2.69,
+          "transition_hint": {
+            "in": "hard_cut",
+            "out": "whoosh"
+          },
+          "split_reason": "hook_deadline_plus_rhythm",
+          "source_claim_ids": [
+            "clm_001"
+          ]
+        },
+        {
+          "scene_id": "scene_002",
+          "purpose": "setup",
+          "narration_text": "No Brasil, o caso de um taxista parecia simples. Registros e relatos mostraram uma contradicao na linha do tempo.",
+          "beat_ids": [
+            "beat_002",
+            "beat_003"
+          ],
+          "estimated_duration_sec": 7.31,
+          "transition_hint": {
+            "in": "match_cut",
+            "out": "whoosh"
+          },
+          "split_reason": "hook_deadline_plus_rhythm",
+          "source_claim_ids": [
+            "clm_001"
+          ]
+        },
+        {
+          "scene_id": "scene_003",
+          "purpose": "payoff",
+          "narration_text": "A evidencia final mudou a leitura do caso. Reveja a primeira frase e perceba o que mudou.",
+          "beat_ids": [
+            "beat_004",
+            "beat_005"
+          ],
+          "estimated_duration_sec": 6.54,
+          "transition_hint": {
+            "in": "match_cut",
+            "out": "fade_out"
+          },
+          "split_reason": "hook_deadline_plus_rhythm",
+          "source_claim_ids": [
+            "clm_001"
+          ]
+        }
+      ]
+    },
+    {
+      "candidate_id": "scene_cand_003",
+      "strategy": "balanced",
+      "scene_count": 5,
+      "total_estimated_duration_sec": 16.54,
+      "scenes": [
+        {
+          "scene_id": "scene_001",
+          "purpose": "hook",
+          "narration_text": "E se a primeira versao estivesse incompleta?",
+          "beat_ids": [
+            "beat_001"
+          ],
+          "estimated_duration_sec": 2.69,
+          "transition_hint": {
+            "in": "hard_cut",
+            "out": "whoosh"
+          },
+          "split_reason": "duration_balancing",
+          "source_claim_ids": [
+            "clm_001"
+          ]
+        },
+        {
+          "scene_id": "scene_002",
+          "purpose": "setup",
+          "narration_text": "No Brasil, o caso de um taxista parecia simples.",
+          "beat_ids": [
+            "beat_002"
+          ],
+          "estimated_duration_sec": 3.46,
+          "transition_hint": {
+            "in": "match_cut",
+            "out": "whoosh"
+          },
+          "split_reason": "duration_balancing",
+          "source_claim_ids": [
+            "clm_001"
+          ]
+        },
+        {
+          "scene_id": "scene_003",
+          "purpose": "build",
+          "narration_text": "Registros e relatos mostraram uma contradicao na linha do tempo.",
+          "beat_ids": [
+            "beat_003"
+          ],
+          "estimated_duration_sec": 3.85,
+          "transition_hint": {
+            "in": "match_cut",
+            "out": "whoosh"
+          },
+          "split_reason": "duration_balancing",
+          "source_claim_ids": [
+            "clm_001"
+          ]
+        },
+        {
+          "scene_id": "scene_004",
+          "purpose": "payoff",
+          "narration_text": "A evidencia final mudou a leitura do caso.",
+          "beat_ids": [
+            "beat_004"
+          ],
+          "estimated_duration_sec": 3.08,
+          "transition_hint": {
+            "in": "match_cut",
+            "out": "whoosh"
+          },
+          "split_reason": "duration_balancing",
+          "source_claim_ids": [
+            "clm_001"
+          ]
+        },
+        {
+          "scene_id": "scene_005",
+          "purpose": "loop",
+          "narration_text": "Reveja a primeira frase e perceba o que mudou.",
+          "beat_ids": [
+            "beat_005"
+          ],
+          "estimated_duration_sec": 3.46,
+          "transition_hint": {
+            "in": "match_cut",
+            "out": "fade_out"
+          },
+          "split_reason": "duration_balancing",
+          "source_claim_ids": [
+            "clm_001"
+          ]
+        }
+      ]
+    }
+  ]
+}

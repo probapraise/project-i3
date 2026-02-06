@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.0.0",
+  "session_id": "sess_l4_0001",
+  "objective_id": "obj_l4_hook",
+  "created_at": "2026-02-06T04:04:43Z",
+  "status": "SUCCESS",
+  "output_artifact_refs": [
+    {
+      "name": "candidates_hook",
+      "path": "/home/dlwhdgus/project i3/examples/l4_run_output/candidates_hook.json"
+    },
+    {
+      "name": "evaluation_report_hook",
+      "path": "/home/dlwhdgus/project i3/examples/l4_run_output/evaluation_report_hook.json"
+    },
+    {
+      "name": "selection_trace_hook",
+      "path": "/home/dlwhdgus/project i3/examples/l4_run_output/selection_trace_hook.json"
+    },
+    {
+      "name": "script_seed_pack",
+      "path": "/home/dlwhdgus/project i3/examples/l4_run_output/script_seed_pack.json"
+    }
+  ],
+  "metrics": {
+    "hook_candidate_count": 6,
+    "selected_hook_id": "hook_004",
+    "selected_hook_score": 75.5,
+    "pass_threshold_met": true
+  }
+}

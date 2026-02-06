@@ -1,0 +1,15 @@
+version: "1.0.0"
+updated_at: "2026-02-06T00:00:00Z"
+
+scene_constraints:
+  target_duration_sec: 45
+  min_scene_sec: 2.0
+  max_scene_sec: 8.0
+  min_scenes: 5
+  max_scenes: 10
+  hook_deadline_sec: 3.0
+
+style:
+  style_preset: "true_crime_cinematic_pt_v2"
+  language: "pt"
+  pacing: "fast, punchy, clear"

@@ -1,0 +1,213 @@
+{
+  "schema_version": "1.0.0",
+  "created_at": "2026-02-06T10:46:34Z",
+  "pipeline_stage": "L7 Scene Prompt Map",
+  "provider_model_trace": [
+    {
+      "agent_id": "SearchAugmenter",
+      "provider": "openai",
+      "model": "gpt-5.2",
+      "tools": [
+        "web_search"
+      ],
+      "purpose": "\uc0ac\uc6a9\uc790 \uc81c\uacf5 \ud1a0\ud53d\uc758 \uc678\ubd80 \uc790\ub8cc \ubcf4\uac15 \uac80\uc0c9"
+    },
+    {
+      "agent_id": "SourceNormalizer",
+      "provider": "openai",
+      "model": "gpt-5.2",
+      "tools": [],
+      "purpose": "\ucd9c\ucc98 \uba54\ud0c0\ub370\uc774\ud130 \uc815\uaddc\ud654 \ubc0f \ud45c\uc900\ud654"
+    },
+    {
+      "agent_id": "ClaimVerifier",
+      "provider": "openai",
+      "model": "gpt-5.2-pro",
+      "tools": [],
+      "purpose": "\ud575\uc2ec claim \uad50\ucc28 \uac80\uc99d \ubc0f \ucda9\ub3cc \ud310\uc815"
+    },
+    {
+      "agent_id": "ResearchSelector",
+      "provider": "openai",
+      "model": "gpt-5.2",
+      "tools": [],
+      "purpose": "score spec \uae30\ubc18 \ud6c4\ubcf4 \uc120\ud0dd"
+    },
+    {
+      "agent_id": "ScriptIdeator",
+      "provider": "openai",
+      "model": "gpt-5.2",
+      "tools": [],
+      "purpose": "hook/\uc0ac\uc2e4 \ud329\ud2b8\ub97c \ubc18\uc601\ud55c \uc2a4\ud06c\ub9bd\ud2b8 \ud6c4\ubcf4 \uc0dd\uc131"
+    },
+    {
+      "agent_id": "ScriptEvaluator",
+      "provider": "openai",
+      "model": "gpt-5.2-pro",
+      "tools": [],
+      "purpose": "\uc2a4\ud06c\ub9bd\ud2b8 \ud6c4\ubcf4 \uc810\uc218 \ud3c9\uac00 \ubc0f \uc815\ucc45 \ud558\ub4dc \uc81c\uc57d \uac80\uc99d"
+    },
+    {
+      "agent_id": "ScriptSelector",
+      "provider": "openai",
+      "model": "gpt-5.2",
+      "tools": [],
+      "purpose": "score spec \uae30\ubc18 L5 \ucd5c\uc885 \uc2a4\ud06c\ub9bd\ud2b8 \uc120\ud0dd"
+    },
+    {
+      "agent_id": "TranslationWriter",
+      "provider": "openai",
+      "model": "gpt-5.2",
+      "tools": [],
+      "purpose": "\uc120\ud0dd \uc2a4\ud06c\ub9bd\ud2b8 \ud3ec\ub974\ud22c\uac08\uc5b4 \ucd08\uc548 \uc0dd\uc131"
+    },
+    {
+      "agent_id": "TranslationCritic",
+      "provider": "openai",
+      "model": "gpt-5.2-pro",
+      "tools": [],
+      "purpose": "\ubc88\uc5ed \ud488\uc9c8/\uc815\ucc45 \uc810\uac80 \ubc0f \uad6c\uc870\ud654 \ubb38\uc11c \uc0dd\uc131"
+    },
+    {
+      "agent_id": "TranslationReconstructor",
+      "provider": "openai",
+      "model": "gpt-5.2",
+      "tools": [],
+      "purpose": "\uc218\uc815 \ubc18\uc601 \ucd5c\uc885 \ubc88\uc5ed\ubcf8 \uc7ac\uad6c\uc131 (HITL fallback)"
+    },
+    {
+      "agent_id": "NarrationExtractor",
+      "provider": "openai",
+      "model": "gpt-5.2",
+      "tools": [],
+      "purpose": "\uad6c\uc870\ud654 \ubc88\uc5ed\ubcf8\uc5d0\uc11c \ub0b4\ub808\uc774\uc158 \uc804\uc6a9 \ud14d\uc2a4\ud2b8 \ucd94\ucd9c"
+    },
+    {
+      "agent_id": "StoryBibleBuilder",
+      "provider": "openai",
+      "model": "gpt-5.2",
+      "tools": [],
+      "purpose": "L6 \uc804\uc5ed \ucee8\ud14d\uc2a4\ud2b8(story bible) \uc0dd\uc131"
+    },
+    {
+      "agent_id": "StoryBibleEvaluator",
+      "provider": "openai",
+      "model": "gpt-5.2-pro",
+      "tools": [],
+      "purpose": "story bible \ud488\uc9c8/\uc548\uc804 \uac80\uc99d"
+    },
+    {
+      "agent_id": "StoryBibleSelector",
+      "provider": "openai",
+      "model": "gpt-5.2",
+      "tools": [],
+      "purpose": "story bible \ucd5c\uc885 \uc120\ud0dd"
+    },
+    {
+      "agent_id": "BeatSplitter",
+      "provider": "openai",
+      "model": "gpt-5.2",
+      "tools": [],
+      "purpose": "\ub300\ubcf8\uc744 \uc758\ubbf8 \ub2e8\uc704 beat\ub85c \ubd84\ud574"
+    },
+    {
+      "agent_id": "BeatEvaluator",
+      "provider": "openai",
+      "model": "gpt-5.2-pro",
+      "tools": [],
+      "purpose": "beat \ubd84\ud574 \ud488\uc9c8 \ud3c9\uac00"
+    },
+    {
+      "agent_id": "BeatSelector",
+      "provider": "openai",
+      "model": "gpt-5.2",
+      "tools": [],
+      "purpose": "beat \ubd84\ud574 \uacb0\uacfc \uc120\ud0dd"
+    },
+    {
+      "agent_id": "SceneComposer",
+      "provider": "openai",
+      "model": "gpt-5.2",
+      "tools": [],
+      "purpose": "beats\ub97c \uc52c \uc2a4\ucf08\ub808\ud1a4\uc73c\ub85c \uc870\ud569"
+    },
+    {
+      "agent_id": "SceneSplitCritic",
+      "provider": "openai",
+      "model": "gpt-5.2-pro",
+      "tools": [],
+      "purpose": "scene split \uc81c\uc57d \uc704\ubc18 \ud3c9\uac00"
+    },
+    {
+      "agent_id": "SceneSplitSelector",
+      "provider": "openai",
+      "model": "gpt-5.2",
+      "tools": [],
+      "purpose": "score spec \uae30\ubc18 scene split \uc120\ud0dd"
+    },
+    {
+      "agent_id": "ScenesJSONBuilder",
+      "provider": "openai",
+      "model": "gpt-5.2",
+      "tools": [],
+      "purpose": "\uc120\ud0dd\ub41c scene skeleton\uc744 scenes_v2 \uacc4\uc57d\uc73c\ub85c \ubcc0\ud658"
+    },
+    {
+      "agent_id": "SceneContextPackager",
+      "provider": "openai",
+      "model": "gpt-5.2",
+      "tools": [],
+      "purpose": "scene\ubcc4 \ucd5c\uc18c \ucee8\ud14d\uc2a4\ud2b8 \ud328\ud0a4\uc9d5"
+    },
+    {
+      "agent_id": "SceneBriefAgent",
+      "provider": "openai",
+      "model": "gpt-5.2",
+      "tools": [],
+      "purpose": "scene\ubcc4 \uc2dc\uac01 brief \uc0dd\uc131"
+    },
+    {
+      "agent_id": "VisualPromptAgent",
+      "provider": "openai",
+      "model": "gpt-5.2",
+      "tools": [],
+      "purpose": "scene\ubcc4 image/video prompt \uc0dd\uc131"
+    },
+    {
+      "agent_id": "PromptValidator",
+      "provider": "openai",
+      "model": "gpt-5.2-pro",
+      "tools": [],
+      "purpose": "prompt \uc815\ucc45/\ud488\uc9c8 \ud558\ub4dc \uc81c\uc57d \uac80\uc99d"
+    },
+    {
+      "agent_id": "PromptSelector",
+      "provider": "openai",
+      "model": "gpt-5.2",
+      "tools": [],
+      "purpose": "score spec \uae30\ubc18 scene\ubcc4 prompt \uc120\ud0dd"
+    },
+    {
+      "agent_id": "ContinuityAuditor",
+      "provider": "openai",
+      "model": "gpt-5.2-pro",
+      "tools": [],
+      "purpose": "scene \uac04 \uce90\ub9ad\ud130/\uc2a4\ud0c0\uc77c/\uc624\ube0c\uc81d\ud2b8 \uc77c\uad00\uc131 \uac10\uc0ac"
+    }
+  ],
+  "inputs": {
+    "session_input": "/home/ljhljh/project i3/examples/artifacts/sample_session_input_l7.json",
+    "session_objective": "/home/ljhljh/project i3/examples/artifacts/sample_session_objective_l7_prompt_map.json",
+    "scenes_v2": "/home/ljhljh/project i3/examples/l6_run_output/scenes_v2.json",
+    "score_spec": "/home/ljhljh/project i3/score_specs/score_spec_prompt.json",
+    "model_map": "/home/ljhljh/project i3/config/agent_model_map.yaml"
+  },
+  "outputs": {
+    "out_dir": "/home/ljhljh/project i3/examples/l7_run_output",
+    "scene_count": 5
+  },
+  "policy": {
+    "model_update_mode": "manual_only",
+    "hard_constraint": "K5 pass_only"
+  }
+}

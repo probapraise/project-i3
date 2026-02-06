@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0.0",
+  "session_id": "sess_l5_0001",
+  "objective_id": "obj_l5_script",
+  "created_at": "2026-02-06T13:30:00Z",
+  "selected_hook": {
+    "hook_id": "hook_004",
+    "hook_text": "What if the most trusted version of the case was wrong?",
+    "total_score": 75.5,
+    "criteria": {
+      "K1": 72,
+      "K3": 86,
+      "K2": 68,
+      "K4": 80
+    },
+    "hard_constraints": {
+      "K5": true
+    },
+    "hard_pass": true
+  },
+  "hook_bank": [
+    {
+      "hook_id": "hook_001",
+      "hook_text": "He was a taxi driver, until one detail rewrote the entire case.",
+      "angle": "contradiction",
+      "trigger_words": [
+        "Misterio"
+      ],
+      "source_claim_ids": [
+        "clm_001"
+      ]
+    },
+    {
+      "hook_id": "hook_004",
+      "hook_text": "What if the most trusted version of the case was wrong?",
+      "angle": "curiosity_question",
+      "trigger_words": [
+        "Duvida"
+      ],
+      "source_claim_ids": [
+        "clm_001"
+      ]
+    }
+  ],
+  "narrative_seed": {
+    "setup": "Victim worked as a taxi driver.",
+    "twist": "What if the most trusted version of the case was wrong?",
+    "resolution": "Final records and verified sources reveal what actually happened.",
+    "loop_line": "Watch the first line again. It means something different now."
+  },
+  "trigger_words": [
+    "Misterio",
+    "Reviravolta",
+    "Duvida"
+  ],
+  "banned_expressions": [
+    "explicit dismemberment details",
+    "graphic torture description",
+    "victim-blaming phrasing"
+  ],
+  "policy_notes": [
+    "Use psychological and investigative framing instead of graphic depictions.",
+    "Maintain respect for victims and avoid glorifying perpetrators."
+  ],
+  "quality_status": "READY_FOR_SCRIPT"
+}

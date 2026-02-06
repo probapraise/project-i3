@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0.0",
+  "gate": "out",
+  "manifest_path": "/home/dlwhdgus/project i3/examples/l1_run_output/gate_out_manifest.runtime.json",
+  "validated_at": "2026-02-06T03:45:57.230851+00:00",
+  "overall_status": "PASS",
+  "summary": {
+    "total": 2,
+    "passed": 2,
+    "failed": 0
+  },
+  "checks": [
+    {
+      "name": "session_output",
+      "artifact_path": "/home/dlwhdgus/project i3/examples/l1_run_output/session_output.json",
+      "schema_path": "/home/dlwhdgus/project i3/schemas/session_output.schema.json",
+      "status": "PASS",
+      "error_count": 0,
+      "errors": []
+    },
+    {
+      "name": "topic_research_bundle",
+      "artifact_path": "/home/dlwhdgus/project i3/examples/l1_run_output/topic_research_bundle.json",
+      "schema_path": "/home/dlwhdgus/project i3/schemas/topic_research_bundle.schema.json",
+      "status": "PASS",
+      "error_count": 0,
+      "errors": []
+    }
+  ]
+}

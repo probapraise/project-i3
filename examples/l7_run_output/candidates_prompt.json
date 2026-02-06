@@ -1,0 +1,491 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "prompt_selection",
+  "created_at": "2026-02-06T10:46:34Z",
+  "scenes": [
+    {
+      "scene_id": "scene_001",
+      "candidates": [
+        {
+          "candidate_id": "scene_001_prompt_001",
+          "scene_id": "scene_001",
+          "strategy": "continuity_focus",
+          "scene_brief": {
+            "brief_id": "scene_001_continuity_focus",
+            "strategy": "continuity_focus",
+            "must_show": [
+              "visual_goal: Deliver immediate stop-scroll tension in first seconds.",
+              "narration_cue: E se a primeira versao estivesse incompleta?",
+              "location_anchor: location_primary",
+              "primary_character: person_victim"
+            ],
+            "avoid": [
+              "explicit dismemberment details",
+              "graphic torture description",
+              "victim-blaming phrasing",
+              "no explicit gore visuals",
+              "avoid glorifying perpetrator"
+            ],
+            "camera_intent": "CLOSEUP / LOW_ANGLE / HANDHELD",
+            "continuity_notes": [
+              "next: No Brasil, o caso de um taxista parecia simples."
+            ]
+          },
+          "visual_prompt": {
+            "image_prompt": "true_crime_cinematic_pt_v2, continuity-focused frame for scene_001. Goal: Deliver immediate stop-scroll tension in first seconds.. Narration cue: E se a primeira versao estivesse incompleta?. Character anchor: person_victim. Location: location_primary. Shot: CLOSEUP LOW_ANGLE.",
+            "video_prompt": "CameraMotion: HANDHELD. Action: abrupt reveal of contradiction. Emotion: shock. Maintain continuity with previous scene none and prepare transition to scene_002."
+          }
+        },
+        {
+          "candidate_id": "scene_001_prompt_002",
+          "scene_id": "scene_001",
+          "strategy": "impact_focus",
+          "scene_brief": {
+            "brief_id": "scene_001_impact_focus",
+            "strategy": "impact_focus",
+            "must_show": [
+              "visual_goal: Deliver immediate stop-scroll tension in first seconds.",
+              "narration_cue: E se a primeira versao estivesse incompleta?",
+              "location_anchor: location_primary",
+              "primary_character: person_victim"
+            ],
+            "avoid": [
+              "explicit dismemberment details",
+              "graphic torture description",
+              "victim-blaming phrasing",
+              "no explicit gore visuals",
+              "avoid glorifying perpetrator"
+            ],
+            "camera_intent": "CLOSEUP / LOW_ANGLE / HANDHELD",
+            "continuity_notes": [
+              "next: No Brasil, o caso de um taxista parecia simples."
+            ]
+          },
+          "visual_prompt": {
+            "image_prompt": "true_crime_cinematic_pt_v2, high-contrast dramatic frame for scene_001. Create immediate scroll-stop impact around: Deliver immediate stop-scroll tension in first seconds.. Narration phrase: E se a primeira versao estivesse incompleta?. Location: location_primary. Shot: CLOSEUP LOW_ANGLE. Character anchor: person_victim.",
+            "video_prompt": "CameraMotion: HANDHELD. Action: abrupt reveal of contradiction. Emotion: shock. Start with a sharp visual reveal, then sustain suspense while preserving scene continuity."
+          }
+        },
+        {
+          "candidate_id": "scene_001_prompt_003",
+          "scene_id": "scene_001",
+          "strategy": "control_focus",
+          "scene_brief": {
+            "brief_id": "scene_001_control_focus",
+            "strategy": "control_focus",
+            "must_show": [
+              "visual_goal: Deliver immediate stop-scroll tension in first seconds.",
+              "narration_cue: E se a primeira versao estivesse incompleta?",
+              "location_anchor: location_primary",
+              "primary_character: person_victim"
+            ],
+            "avoid": [
+              "explicit dismemberment details",
+              "graphic torture description",
+              "victim-blaming phrasing",
+              "no explicit gore visuals",
+              "avoid glorifying perpetrator"
+            ],
+            "camera_intent": "CLOSEUP / LOW_ANGLE / HANDHELD",
+            "continuity_notes": [
+              "next: No Brasil, o caso de um taxista parecia simples."
+            ]
+          },
+          "visual_prompt": {
+            "image_prompt": "true_crime_cinematic_pt_v2. SceneID: scene_001. Goal: Deliver immediate stop-scroll tension in first seconds.. Character: person_victim. Location: location_primary. Shot: CLOSEUP LOW_ANGLE. NarrationCue: E se a primeira versao estivesse incompleta?.",
+            "video_prompt": "CameraMotion: HANDHELD. Action: abrupt reveal of contradiction. Emotion: shock. Use deterministic staging and maintain continuity with neighboring scenes."
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "scene_002",
+      "candidates": [
+        {
+          "candidate_id": "scene_002_prompt_001",
+          "scene_id": "scene_002",
+          "strategy": "continuity_focus",
+          "scene_brief": {
+            "brief_id": "scene_002_continuity_focus",
+            "strategy": "continuity_focus",
+            "must_show": [
+              "visual_goal: Establish the case context and principal characters.",
+              "narration_cue: No Brasil, o caso de um taxista parecia simples.",
+              "location_anchor: location_primary",
+              "primary_character: person_victim"
+            ],
+            "avoid": [
+              "explicit dismemberment details",
+              "graphic torture description",
+              "victim-blaming phrasing",
+              "no explicit gore visuals",
+              "avoid glorifying perpetrator"
+            ],
+            "camera_intent": "WIDE / EYE_LEVEL / PAN",
+            "continuity_notes": [
+              "prev: E se a primeira versao estivesse incompleta?",
+              "next: Registros e relatos mostraram uma contradicao na linha do tempo."
+            ]
+          },
+          "visual_prompt": {
+            "image_prompt": "true_crime_cinematic_pt_v2, continuity-focused frame for scene_002. Goal: Establish the case context and principal characters.. Narration cue: No Brasil, o caso de um taxista parecia simples.. Character anchor: person_victim. Location: location_primary. Shot: WIDE EYE_LEVEL.",
+            "video_prompt": "CameraMotion: PAN. Action: establish people and place. Emotion: unease. Maintain continuity with previous scene scene_001 and prepare transition to scene_003."
+          }
+        },
+        {
+          "candidate_id": "scene_002_prompt_002",
+          "scene_id": "scene_002",
+          "strategy": "impact_focus",
+          "scene_brief": {
+            "brief_id": "scene_002_impact_focus",
+            "strategy": "impact_focus",
+            "must_show": [
+              "visual_goal: Establish the case context and principal characters.",
+              "narration_cue: No Brasil, o caso de um taxista parecia simples.",
+              "location_anchor: location_primary",
+              "primary_character: person_victim"
+            ],
+            "avoid": [
+              "explicit dismemberment details",
+              "graphic torture description",
+              "victim-blaming phrasing",
+              "no explicit gore visuals",
+              "avoid glorifying perpetrator"
+            ],
+            "camera_intent": "WIDE / EYE_LEVEL / PAN",
+            "continuity_notes": [
+              "prev: E se a primeira versao estivesse incompleta?",
+              "next: Registros e relatos mostraram uma contradicao na linha do tempo."
+            ]
+          },
+          "visual_prompt": {
+            "image_prompt": "true_crime_cinematic_pt_v2, high-contrast dramatic frame for scene_002. Create immediate scroll-stop impact around: Establish the case context and principal characters.. Narration phrase: No Brasil, o caso de um taxista parecia simples.. Location: location_primary. Shot: WIDE EYE_LEVEL. Character anchor: person_victim.",
+            "video_prompt": "CameraMotion: PAN. Action: establish people and place. Emotion: unease. Start with a sharp visual reveal, then sustain suspense while preserving scene continuity."
+          }
+        },
+        {
+          "candidate_id": "scene_002_prompt_003",
+          "scene_id": "scene_002",
+          "strategy": "control_focus",
+          "scene_brief": {
+            "brief_id": "scene_002_control_focus",
+            "strategy": "control_focus",
+            "must_show": [
+              "visual_goal: Establish the case context and principal characters.",
+              "narration_cue: No Brasil, o caso de um taxista parecia simples.",
+              "location_anchor: location_primary",
+              "primary_character: person_victim"
+            ],
+            "avoid": [
+              "explicit dismemberment details",
+              "graphic torture description",
+              "victim-blaming phrasing",
+              "no explicit gore visuals",
+              "avoid glorifying perpetrator"
+            ],
+            "camera_intent": "WIDE / EYE_LEVEL / PAN",
+            "continuity_notes": [
+              "prev: E se a primeira versao estivesse incompleta?",
+              "next: Registros e relatos mostraram uma contradicao na linha do tempo."
+            ]
+          },
+          "visual_prompt": {
+            "image_prompt": "true_crime_cinematic_pt_v2. SceneID: scene_002. Goal: Establish the case context and principal characters.. Character: person_victim. Location: location_primary. Shot: WIDE EYE_LEVEL. NarrationCue: No Brasil, o caso de um taxista parecia simples..",
+            "video_prompt": "CameraMotion: PAN. Action: establish people and place. Emotion: unease. Use deterministic staging and maintain continuity with neighboring scenes."
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "scene_003",
+      "candidates": [
+        {
+          "candidate_id": "scene_003_prompt_001",
+          "scene_id": "scene_003",
+          "strategy": "continuity_focus",
+          "scene_brief": {
+            "brief_id": "scene_003_continuity_focus",
+            "strategy": "continuity_focus",
+            "must_show": [
+              "visual_goal: Increase curiosity with evidence-driven progression.",
+              "narration_cue: Registros e relatos mostraram uma contradicao na linha do tempo.",
+              "location_anchor: location_primary",
+              "primary_character: person_victim"
+            ],
+            "avoid": [
+              "explicit dismemberment details",
+              "graphic torture description",
+              "victim-blaming phrasing",
+              "no explicit gore visuals",
+              "avoid glorifying perpetrator"
+            ],
+            "camera_intent": "MEDIUM / EYE_LEVEL / TRACKING",
+            "continuity_notes": [
+              "prev: No Brasil, o caso de um taxista parecia simples.",
+              "next: A evidencia final mudou a leitura do caso."
+            ]
+          },
+          "visual_prompt": {
+            "image_prompt": "true_crime_cinematic_pt_v2, continuity-focused frame for scene_003. Goal: Increase curiosity with evidence-driven progression.. Narration cue: Registros e relatos mostraram uma contradicao na linha do tempo.. Character anchor: person_victim. Location: location_primary. Shot: MEDIUM EYE_LEVEL.",
+            "video_prompt": "CameraMotion: TRACKING. Action: connect clues and timeline. Emotion: suspense. Maintain continuity with previous scene scene_002 and prepare transition to scene_004."
+          }
+        },
+        {
+          "candidate_id": "scene_003_prompt_002",
+          "scene_id": "scene_003",
+          "strategy": "impact_focus",
+          "scene_brief": {
+            "brief_id": "scene_003_impact_focus",
+            "strategy": "impact_focus",
+            "must_show": [
+              "visual_goal: Increase curiosity with evidence-driven progression.",
+              "narration_cue: Registros e relatos mostraram uma contradicao na linha do tempo.",
+              "location_anchor: location_primary",
+              "primary_character: person_victim"
+            ],
+            "avoid": [
+              "explicit dismemberment details",
+              "graphic torture description",
+              "victim-blaming phrasing",
+              "no explicit gore visuals",
+              "avoid glorifying perpetrator"
+            ],
+            "camera_intent": "MEDIUM / EYE_LEVEL / TRACKING",
+            "continuity_notes": [
+              "prev: No Brasil, o caso de um taxista parecia simples.",
+              "next: A evidencia final mudou a leitura do caso."
+            ]
+          },
+          "visual_prompt": {
+            "image_prompt": "true_crime_cinematic_pt_v2, high-contrast dramatic frame for scene_003. Create immediate scroll-stop impact around: Increase curiosity with evidence-driven progression.. Narration phrase: Registros e relatos mostraram uma contradicao na linha do tempo.. Location: location_primary. Shot: MEDIUM EYE_LEVEL. Character anchor: person_victim.",
+            "video_prompt": "CameraMotion: TRACKING. Action: connect clues and timeline. Emotion: suspense. Start with a sharp visual reveal, then sustain suspense while preserving scene continuity."
+          }
+        },
+        {
+          "candidate_id": "scene_003_prompt_003",
+          "scene_id": "scene_003",
+          "strategy": "control_focus",
+          "scene_brief": {
+            "brief_id": "scene_003_control_focus",
+            "strategy": "control_focus",
+            "must_show": [
+              "visual_goal: Increase curiosity with evidence-driven progression.",
+              "narration_cue: Registros e relatos mostraram uma contradicao na linha do tempo.",
+              "location_anchor: location_primary",
+              "primary_character: person_victim"
+            ],
+            "avoid": [
+              "explicit dismemberment details",
+              "graphic torture description",
+              "victim-blaming phrasing",
+              "no explicit gore visuals",
+              "avoid glorifying perpetrator"
+            ],
+            "camera_intent": "MEDIUM / EYE_LEVEL / TRACKING",
+            "continuity_notes": [
+              "prev: No Brasil, o caso de um taxista parecia simples.",
+              "next: A evidencia final mudou a leitura do caso."
+            ]
+          },
+          "visual_prompt": {
+            "image_prompt": "true_crime_cinematic_pt_v2. SceneID: scene_003. Goal: Increase curiosity with evidence-driven progression.. Character: person_victim. Location: location_primary. Shot: MEDIUM EYE_LEVEL. NarrationCue: Registros e relatos mostraram uma contradicao na linha do tempo..",
+            "video_prompt": "CameraMotion: TRACKING. Action: connect clues and timeline. Emotion: suspense. Use deterministic staging and maintain continuity with neighboring scenes."
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "scene_004",
+      "candidates": [
+        {
+          "candidate_id": "scene_004_prompt_001",
+          "scene_id": "scene_004",
+          "strategy": "continuity_focus",
+          "scene_brief": {
+            "brief_id": "scene_004_continuity_focus",
+            "strategy": "continuity_focus",
+            "must_show": [
+              "visual_goal: Resolve contradiction with clear investigative framing.",
+              "narration_cue: A evidencia final mudou a leitura do caso.",
+              "location_anchor: location_primary",
+              "primary_character: person_victim"
+            ],
+            "avoid": [
+              "explicit dismemberment details",
+              "graphic torture description",
+              "victim-blaming phrasing",
+              "no explicit gore visuals",
+              "avoid glorifying perpetrator"
+            ],
+            "camera_intent": "CLOSEUP / HIGH_ANGLE / DOLLY",
+            "continuity_notes": [
+              "prev: Registros e relatos mostraram uma contradicao na linha do tempo.",
+              "next: Reveja a primeira frase e perceba o que mudou."
+            ]
+          },
+          "visual_prompt": {
+            "image_prompt": "true_crime_cinematic_pt_v2, continuity-focused frame for scene_004. Goal: Resolve contradiction with clear investigative framing.. Narration cue: A evidencia final mudou a leitura do caso.. Character anchor: person_victim. Location: location_primary. Shot: CLOSEUP HIGH_ANGLE.",
+            "video_prompt": "CameraMotion: DOLLY. Action: confirm decisive evidence. Emotion: grim clarity. Maintain continuity with previous scene scene_003 and prepare transition to scene_005."
+          }
+        },
+        {
+          "candidate_id": "scene_004_prompt_002",
+          "scene_id": "scene_004",
+          "strategy": "impact_focus",
+          "scene_brief": {
+            "brief_id": "scene_004_impact_focus",
+            "strategy": "impact_focus",
+            "must_show": [
+              "visual_goal: Resolve contradiction with clear investigative framing.",
+              "narration_cue: A evidencia final mudou a leitura do caso.",
+              "location_anchor: location_primary",
+              "primary_character: person_victim"
+            ],
+            "avoid": [
+              "explicit dismemberment details",
+              "graphic torture description",
+              "victim-blaming phrasing",
+              "no explicit gore visuals",
+              "avoid glorifying perpetrator"
+            ],
+            "camera_intent": "CLOSEUP / HIGH_ANGLE / DOLLY",
+            "continuity_notes": [
+              "prev: Registros e relatos mostraram uma contradicao na linha do tempo.",
+              "next: Reveja a primeira frase e perceba o que mudou."
+            ]
+          },
+          "visual_prompt": {
+            "image_prompt": "true_crime_cinematic_pt_v2, high-contrast dramatic frame for scene_004. Create immediate scroll-stop impact around: Resolve contradiction with clear investigative framing.. Narration phrase: A evidencia final mudou a leitura do caso.. Location: location_primary. Shot: CLOSEUP HIGH_ANGLE. Character anchor: person_victim.",
+            "video_prompt": "CameraMotion: DOLLY. Action: confirm decisive evidence. Emotion: grim clarity. Start with a sharp visual reveal, then sustain suspense while preserving scene continuity."
+          }
+        },
+        {
+          "candidate_id": "scene_004_prompt_003",
+          "scene_id": "scene_004",
+          "strategy": "control_focus",
+          "scene_brief": {
+            "brief_id": "scene_004_control_focus",
+            "strategy": "control_focus",
+            "must_show": [
+              "visual_goal: Resolve contradiction with clear investigative framing.",
+              "narration_cue: A evidencia final mudou a leitura do caso.",
+              "location_anchor: location_primary",
+              "primary_character: person_victim"
+            ],
+            "avoid": [
+              "explicit dismemberment details",
+              "graphic torture description",
+              "victim-blaming phrasing",
+              "no explicit gore visuals",
+              "avoid glorifying perpetrator"
+            ],
+            "camera_intent": "CLOSEUP / HIGH_ANGLE / DOLLY",
+            "continuity_notes": [
+              "prev: Registros e relatos mostraram uma contradicao na linha do tempo.",
+              "next: Reveja a primeira frase e perceba o que mudou."
+            ]
+          },
+          "visual_prompt": {
+            "image_prompt": "true_crime_cinematic_pt_v2. SceneID: scene_004. Goal: Resolve contradiction with clear investigative framing.. Character: person_victim. Location: location_primary. Shot: CLOSEUP HIGH_ANGLE. NarrationCue: A evidencia final mudou a leitura do caso..",
+            "video_prompt": "CameraMotion: DOLLY. Action: confirm decisive evidence. Emotion: grim clarity. Use deterministic staging and maintain continuity with neighboring scenes."
+          }
+        }
+      ]
+    },
+    {
+      "scene_id": "scene_005",
+      "candidates": [
+        {
+          "candidate_id": "scene_005_prompt_001",
+          "scene_id": "scene_005",
+          "strategy": "continuity_focus",
+          "scene_brief": {
+            "brief_id": "scene_005_continuity_focus",
+            "strategy": "continuity_focus",
+            "must_show": [
+              "visual_goal: Create replay curiosity by mirroring the opening beat.",
+              "narration_cue: Reveja a primeira frase e perceba o que mudou.",
+              "location_anchor: location_primary",
+              "primary_character: person_victim"
+            ],
+            "avoid": [
+              "explicit dismemberment details",
+              "graphic torture description",
+              "victim-blaming phrasing",
+              "no explicit gore visuals",
+              "avoid glorifying perpetrator"
+            ],
+            "camera_intent": "EXTREME_CLOSEUP / DUTCH / STATIC",
+            "continuity_notes": [
+              "prev: A evidencia final mudou a leitura do caso."
+            ]
+          },
+          "visual_prompt": {
+            "image_prompt": "true_crime_cinematic_pt_v2, continuity-focused frame for scene_005. Goal: Create replay curiosity by mirroring the opening beat.. Narration cue: Reveja a primeira frase e perceba o que mudou.. Character anchor: person_victim. Location: location_primary. Shot: EXTREME_CLOSEUP DUTCH.",
+            "video_prompt": "CameraMotion: STATIC. Action: echo opening line. Emotion: curiosity. Maintain continuity with previous scene scene_004 and prepare transition to none."
+          }
+        },
+        {
+          "candidate_id": "scene_005_prompt_002",
+          "scene_id": "scene_005",
+          "strategy": "impact_focus",
+          "scene_brief": {
+            "brief_id": "scene_005_impact_focus",
+            "strategy": "impact_focus",
+            "must_show": [
+              "visual_goal: Create replay curiosity by mirroring the opening beat.",
+              "narration_cue: Reveja a primeira frase e perceba o que mudou.",
+              "location_anchor: location_primary",
+              "primary_character: person_victim"
+            ],
+            "avoid": [
+              "explicit dismemberment details",
+              "graphic torture description",
+              "victim-blaming phrasing",
+              "no explicit gore visuals",
+              "avoid glorifying perpetrator"
+            ],
+            "camera_intent": "EXTREME_CLOSEUP / DUTCH / STATIC",
+            "continuity_notes": [
+              "prev: A evidencia final mudou a leitura do caso."
+            ]
+          },
+          "visual_prompt": {
+            "image_prompt": "true_crime_cinematic_pt_v2, high-contrast dramatic frame for scene_005. Create immediate scroll-stop impact around: Create replay curiosity by mirroring the opening beat.. Narration phrase: Reveja a primeira frase e perceba o que mudou.. Location: location_primary. Shot: EXTREME_CLOSEUP DUTCH. Character anchor: person_victim.",
+            "video_prompt": "CameraMotion: STATIC. Action: echo opening line. Emotion: curiosity. Start with a sharp visual reveal, then sustain suspense while preserving scene continuity."
+          }
+        },
+        {
+          "candidate_id": "scene_005_prompt_003",
+          "scene_id": "scene_005",
+          "strategy": "control_focus",
+          "scene_brief": {
+            "brief_id": "scene_005_control_focus",
+            "strategy": "control_focus",
+            "must_show": [
+              "visual_goal: Create replay curiosity by mirroring the opening beat.",
+              "narration_cue: Reveja a primeira frase e perceba o que mudou.",
+              "location_anchor: location_primary",
+              "primary_character: person_victim"
+            ],
+            "avoid": [
+              "explicit dismemberment details",
+              "graphic torture description",
+              "victim-blaming phrasing",
+              "no explicit gore visuals",
+              "avoid glorifying perpetrator"
+            ],
+            "camera_intent": "EXTREME_CLOSEUP / DUTCH / STATIC",
+            "continuity_notes": [
+              "prev: A evidencia final mudou a leitura do caso."
+            ]
+          },
+          "visual_prompt": {
+            "image_prompt": "true_crime_cinematic_pt_v2. SceneID: scene_005. Goal: Create replay curiosity by mirroring the opening beat.. Character: person_victim. Location: location_primary. Shot: EXTREME_CLOSEUP DUTCH. NarrationCue: Reveja a primeira frase e perceba o que mudou..",
+            "video_prompt": "CameraMotion: STATIC. Action: echo opening line. Emotion: curiosity. Use deterministic staging and maintain continuity with neighboring scenes."
+          }
+        }
+      ]
+    }
+  ]
+}

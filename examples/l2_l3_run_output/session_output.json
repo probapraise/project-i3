@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "session_id": "sess_l2l3_0001",
+  "objective_id": "obj_l2l3_profile",
+  "created_at": "2026-02-06T03:58:05Z",
+  "status": "SUCCESS",
+  "output_artifact_refs": [
+    {
+      "name": "entity_evidence_pack",
+      "path": "/home/dlwhdgus/project i3/examples/l2_l3_run_output/entity_evidence_pack.json"
+    },
+    {
+      "name": "entity_profile_pack",
+      "path": "/home/dlwhdgus/project i3/examples/l2_l3_run_output/entity_profile_pack.json"
+    },
+    {
+      "name": "inference_merge_report",
+      "path": "/home/dlwhdgus/project i3/examples/l2_l3_run_output/inference_merge_report.json"
+    },
+    {
+      "name": "inference_rules_snapshot",
+      "path": "/home/dlwhdgus/project i3/examples/l2_l3_run_output/inference_rules_snapshot.json"
+    }
+  ],
+  "metrics": {
+    "inference_candidate_count": 16,
+    "remaining_no_info_count": 4
+  }
+}

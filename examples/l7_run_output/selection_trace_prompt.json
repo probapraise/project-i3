@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "prompt_selection",
+  "created_at": "2026-02-06T10:46:34Z",
+  "tie_break_order": [
+    "K3",
+    "K2",
+    "K1"
+  ],
+  "selected_by_scene": [
+    {
+      "scene_id": "scene_001",
+      "selected_candidate_id": "scene_001_prompt_002",
+      "selected_score": 73.6,
+      "selection_reason": "Highest weighted score under hard-constraint policy."
+    },
+    {
+      "scene_id": "scene_002",
+      "selected_candidate_id": "scene_002_prompt_002",
+      "selected_score": 71.1,
+      "selection_reason": "Highest weighted score under hard-constraint policy."
+    },
+    {
+      "scene_id": "scene_003",
+      "selected_candidate_id": "scene_003_prompt_002",
+      "selected_score": 72.9,
+      "selection_reason": "Highest weighted score under hard-constraint policy."
+    },
+    {
+      "scene_id": "scene_004",
+      "selected_candidate_id": "scene_004_prompt_002",
+      "selected_score": 71.1,
+      "selection_reason": "Highest weighted score under hard-constraint policy."
+    },
+    {
+      "scene_id": "scene_005",
+      "selected_candidate_id": "scene_005_prompt_002",
+      "selected_score": 74.4,
+      "selection_reason": "Highest weighted score under hard-constraint policy."
+    }
+  ]
+}

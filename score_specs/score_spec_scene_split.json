@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "scene_split",
+  "description": "L6 Scene 분할 품질 점수 계약",
+  "score_range": {
+    "min": 0,
+    "max": 100
+  },
+  "criteria": [
+    {
+      "id": "K3",
+      "name": "Beat-to-Scene Retention Flow",
+      "weight": 0.35,
+      "direction": "higher_better"
+    },
+    {
+      "id": "K1",
+      "name": "Per-scene Attention Density",
+      "weight": 0.25,
+      "direction": "higher_better"
+    },
+    {
+      "id": "K2",
+      "name": "Narrative Coherence",
+      "weight": 0.25,
+      "direction": "higher_better"
+    },
+    {
+      "id": "K4",
+      "name": "Production Feasibility",
+      "weight": 0.15,
+      "direction": "higher_better"
+    }
+  ],
+  "hard_constraints": [
+    {
+      "id": "K5",
+      "name": "Policy Safety",
+      "rule": "pass_only"
+    }
+  ],
+  "selection_rule": {
+    "strategy": "top_1",
+    "min_accept_score": 70,
+    "tie_break_order": [
+      "K3",
+      "K1"
+    ]
+  }
+}

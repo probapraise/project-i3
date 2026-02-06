@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0.0",
+  "session_id": "sess_l1_0001",
+  "objective_id": "obj_l1_research",
+  "created_at": "2026-02-06T12:00:00Z",
+  "topic_query": "Brazil taxi driver true crime case 2025",
+  "user_collected_materials": [
+    {
+      "material_id": "mat_001",
+      "material_type": "URL",
+      "content": "Initial report from user collection",
+      "url": "https://example.com/news/case-001",
+      "source_name": "Example News"
+    }
+  ]
+}

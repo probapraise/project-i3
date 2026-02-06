@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.0.0",
+  "session_id": "sess_l4_0001",
+  "objective_id": "obj_l4_hook",
+  "created_at": "2026-02-06T12:30:00Z",
+  "case_id": "case_sess_l4_0001",
+  "entities": [
+    {
+      "entity_id": "person_victim",
+      "entity_type": "PERSON",
+      "role_label": "victim",
+      "display_name": "victim",
+      "fields": [
+        {
+          "field": "occupation",
+          "value": "taxi driver",
+          "source_tag": "REAL",
+          "sources": [
+            "src_001"
+          ]
+        },
+        {
+          "field": "estimated_age",
+          "value": "50s",
+          "source_tag": "REAL",
+          "sources": [
+            "src_001"
+          ]
+        },
+        {
+          "field": "gender",
+          "value": "male",
+          "source_tag": "REAL",
+          "sources": [
+            "src_001"
+          ]
+        },
+        {
+          "field": "ethnicity",
+          "value": "Latino/Brazilian appearance",
+          "source_tag": "INFERRED",
+          "confidence": 0.56,
+          "reason": "Case location context indicates Brazil."
+        },
+        {
+          "field": "hair_style",
+          "value": "short practical style",
+          "source_tag": "INFERRED",
+          "confidence": 0.36,
+          "reason": "No explicit evidence; neutral production-safe default."
+        },
+        {
+          "field": "hair_color",
+          "value": "dark brown",
+          "source_tag": "INFERRED",
+          "confidence": 0.44,
+          "reason": "Default neutral appearance prior for region-level context."
+        }
+      ]
+    },
+    {
+      "entity_id": "person_perpetrator",
+      "entity_type": "PERSON",
+      "role_label": "perpetrator",
+      "display_name": "perpetrator",
+      "fields": [
+        {
+          "field": "occupation",
+          "value": null,
+          "source_tag": "NO_INFO"
+        },
+        {
+          "field": "estimated_age",
+          "value": null,
+          "source_tag": "NO_INFO"
+        },
+        {
+          "field": "gender",
+          "value": null,
+          "source_tag": "NO_INFO"
+        }
+      ]
+    },
+    {
+      "entity_id": "location_primary",
+      "entity_type": "LOCATION",
+      "role_label": "primary_scene",
+      "display_name": "primary_scene",
+      "fields": [
+        {
+          "field": "country",
+          "value": "Brazil",
+          "source_tag": "REAL",
+          "sources": [
+            "topic_query"
+          ]
+        },
+        {
+          "field": "city",
+          "value": "unspecified urban area in Brazil",
+          "source_tag": "INFERRED",
+          "confidence": 0.33,
+          "reason": "Country is known, city is missing."
+        },
+        {
+          "field": "place_type",
+          "value": "urban street",
+          "source_tag": "INFERRED",
+          "confidence": 0.42,
+          "reason": "Neutral default scene type for crime reportage visuals."
+        }
+      ]
+    }
+  ],
+  "context_fields": [
+    {
+      "field": "visual_assets_available",
+      "value": 1,
+      "source_tag": "REAL",
+      "sources": [
+        "topic_research_bundle.visual_assets"
+      ]
+    }
+  ],
+  "profile_status": "NEEDS_HITL_REVIEW"
+}

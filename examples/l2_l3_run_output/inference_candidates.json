@@ -1,0 +1,162 @@
+[
+  {
+    "entity_id": "person_victim",
+    "field": {
+      "field": "ethnicity",
+      "value": "Latino/Brazilian appearance",
+      "source_tag": "INFERRED",
+      "confidence": 0.56,
+      "reason": "Case location context indicates Brazil."
+    }
+  },
+  {
+    "entity_id": "person_victim",
+    "field": {
+      "field": "hair_style",
+      "value": "short practical style",
+      "source_tag": "INFERRED",
+      "confidence": 0.36,
+      "reason": "No explicit evidence; neutral production-safe default."
+    }
+  },
+  {
+    "entity_id": "person_victim",
+    "field": {
+      "field": "hair_color",
+      "value": "dark brown",
+      "source_tag": "INFERRED",
+      "confidence": 0.44,
+      "reason": "Default neutral appearance prior for region-level context."
+    }
+  },
+  {
+    "entity_id": "person_victim",
+    "field": {
+      "field": "body_type",
+      "value": "average build",
+      "source_tag": "INFERRED",
+      "confidence": 0.58,
+      "reason": "Occupation context suggests non-extreme build as neutral prior."
+    }
+  },
+  {
+    "entity_id": "person_victim",
+    "field": {
+      "field": "outfit_signature",
+      "value": "plain shirt and dark pants",
+      "source_tag": "INFERRED",
+      "confidence": 0.52,
+      "reason": "Occupation context (taxi driver) implies practical everyday attire."
+    }
+  },
+  {
+    "entity_id": "person_victim",
+    "field": {
+      "field": "face_signature",
+      "value": "neutral expression with natural features",
+      "source_tag": "INFERRED",
+      "confidence": 0.3,
+      "reason": "No explicit evidence; conservative non-specific portrait prior."
+    }
+  },
+  {
+    "entity_id": "person_perpetrator",
+    "field": {
+      "field": "ethnicity",
+      "value": "Latino/Brazilian appearance",
+      "source_tag": "INFERRED",
+      "confidence": 0.56,
+      "reason": "Case location context indicates Brazil."
+    }
+  },
+  {
+    "entity_id": "person_perpetrator",
+    "field": {
+      "field": "hair_style",
+      "value": "short practical style",
+      "source_tag": "INFERRED",
+      "confidence": 0.36,
+      "reason": "No explicit evidence; neutral production-safe default."
+    }
+  },
+  {
+    "entity_id": "person_perpetrator",
+    "field": {
+      "field": "hair_color",
+      "value": "dark brown",
+      "source_tag": "INFERRED",
+      "confidence": 0.44,
+      "reason": "Default neutral appearance prior for region-level context."
+    }
+  },
+  {
+    "entity_id": "person_perpetrator",
+    "field": {
+      "field": "body_type",
+      "value": "average build",
+      "source_tag": "INFERRED",
+      "confidence": 0.58,
+      "reason": "Occupation context suggests non-extreme build as neutral prior."
+    }
+  },
+  {
+    "entity_id": "person_perpetrator",
+    "field": {
+      "field": "outfit_signature",
+      "value": "plain shirt and dark pants",
+      "source_tag": "INFERRED",
+      "confidence": 0.52,
+      "reason": "Occupation context (taxi driver) implies practical everyday attire."
+    }
+  },
+  {
+    "entity_id": "person_perpetrator",
+    "field": {
+      "field": "face_signature",
+      "value": "neutral expression with natural features",
+      "source_tag": "INFERRED",
+      "confidence": 0.3,
+      "reason": "No explicit evidence; conservative non-specific portrait prior."
+    }
+  },
+  {
+    "entity_id": "location_primary",
+    "field": {
+      "field": "city",
+      "value": "unspecified urban area in Brazil",
+      "source_tag": "INFERRED",
+      "confidence": 0.33,
+      "reason": "Country is known, city is missing."
+    }
+  },
+  {
+    "entity_id": "location_primary",
+    "field": {
+      "field": "place_type",
+      "value": "urban street",
+      "source_tag": "INFERRED",
+      "confidence": 0.42,
+      "reason": "Neutral default scene type for crime reportage visuals."
+    }
+  },
+  {
+    "entity_id": "location_primary",
+    "field": {
+      "field": "scene_lighting",
+      "value": "natural daylight",
+      "source_tag": "INFERRED",
+      "confidence": 0.28,
+      "reason": "No timing evidence; neutral default for clarity."
+    }
+  },
+  {
+    "entity_id": "location_primary",
+    "field": {
+      "field": "weather",
+      "value": "clear",
+      "source_tag": "INFERRED",
+      "confidence": 0.25,
+      "reason": "No explicit weather evidence; stable baseline assumption."
+    }
+  }
+]

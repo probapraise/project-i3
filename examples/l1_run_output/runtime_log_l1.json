@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0.0",
+  "created_at": "2026-02-06T03:45:57Z",
+  "pipeline_stage": "L1 Topic Research",
+  "provider_model_trace": [
+    {
+      "agent_id": "SearchAugmenter",
+      "provider": "openai",
+      "model": "gpt-5.2",
+      "tools": [
+        "web_search"
+      ],
+      "purpose": "\uc0ac\uc6a9\uc790 \uc81c\uacf5 \ud1a0\ud53d\uc758 \uc678\ubd80 \uc790\ub8cc \ubcf4\uac15 \uac80\uc0c9"
+    },
+    {
+      "agent_id": "SourceNormalizer",
+      "provider": "openai",
+      "model": "gpt-5.2",
+      "tools": [],
+      "purpose": "\ucd9c\ucc98 \uba54\ud0c0\ub370\uc774\ud130 \uc815\uaddc\ud654 \ubc0f \ud45c\uc900\ud654"
+    },
+    {
+      "agent_id": "ClaimVerifier",
+      "provider": "openai",
+      "model": "gpt-5.2-pro",
+      "tools": [],
+      "purpose": "\ud575\uc2ec claim \uad50\ucc28 \uac80\uc99d \ubc0f \ucda9\ub3cc \ud310\uc815"
+    },
+    {
+      "agent_id": "ResearchSelector",
+      "provider": "openai",
+      "model": "gpt-5.2",
+      "tools": [],
+      "purpose": "score spec \uae30\ubc18 \ud6c4\ubcf4 \uc120\ud0dd"
+    }
+  ],
+  "inputs": {
+    "session_input": "/home/dlwhdgus/project i3/examples/artifacts/sample_session_input.json",
+    "session_objective": "/home/dlwhdgus/project i3/examples/artifacts/sample_session_objective.json",
+    "topic_intake_input": "/home/dlwhdgus/project i3/examples/artifacts/sample_topic_intake_input.json",
+    "score_spec": "/home/dlwhdgus/project i3/score_specs/score_spec_topic_intake.json",
+    "model_map": "/home/dlwhdgus/project i3/config/agent_model_map.yaml"
+  },
+  "outputs": {
+    "out_dir": "/home/dlwhdgus/project i3/examples/l1_run_output"
+  }
+}

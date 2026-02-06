@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "gate": "out",
+  "manifest_path": "/home/ljhljh/project i3/examples/l7_run_output/gate_out_manifest.runtime.json",
+  "validated_at": "2026-02-06T10:46:34.349819+00:00",
+  "overall_status": "PASS",
+  "summary": {
+    "total": 3,
+    "passed": 3,
+    "failed": 0
+  },
+  "checks": [
+    {
+      "name": "session_output",
+      "artifact_path": "/home/ljhljh/project i3/examples/l7_run_output/session_output.json",
+      "schema_path": "/home/ljhljh/project i3/schemas/session_output.schema.json",
+      "status": "PASS",
+      "error_count": 0,
+      "errors": []
+    },
+    {
+      "name": "scenes_v2",
+      "artifact_path": "/home/ljhljh/project i3/examples/l7_run_output/scenes_v2.json",
+      "schema_path": "/home/ljhljh/project i3/schemas/scenes_v2.schema.json",
+      "status": "PASS",
+      "error_count": 0,
+      "errors": []
+    },
+    {
+      "name": "prompt_map_pack",
+      "artifact_path": "/home/ljhljh/project i3/examples/l7_run_output/prompt_map_pack.json",
+      "schema_path": "/home/ljhljh/project i3/schemas/prompt_map_pack.schema.json",
+      "status": "PASS",
+      "error_count": 0,
+      "errors": []
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "topic_intake",
+  "created_at": "2026-02-06T03:45:57Z",
+  "selected_candidate_id": "cand_all",
+  "selection_reason": "Highest weighted score among hard-constraint passing candidates."
+}

@@ -1,0 +1,176 @@
+version: "1.0.0"
+updated_at: "2026-02-06T00:00:00Z"
+
+policy:
+  single_model_per_agent: true
+  automatic_fallback: false
+  automatic_escalation: false
+  automatic_research_loop: false
+  model_switch_timing: "session_start_only"
+  model_update_mode: "manual_only"
+
+agents:
+  SearchAugmenter:
+    provider: "openai"
+    model: "gpt-5.2"
+    tools:
+      - "web_search"
+    purpose: "사용자 제공 토픽의 외부 자료 보강 검색"
+
+  SourceNormalizer:
+    provider: "openai"
+    model: "gpt-5.2"
+    tools: []
+    purpose: "출처 메타데이터 정규화 및 표준화"
+
+  ClaimVerifier:
+    provider: "openai"
+    model: "gpt-5.2-pro"
+    tools: []
+    purpose: "핵심 claim 교차 검증 및 충돌 판정"
+
+  ResearchSelector:
+    provider: "openai"
+    model: "gpt-5.2"
+    tools: []
+    purpose: "score spec 기반 후보 선택"
+
+  ScriptIdeator:
+    provider: "openai"
+    model: "gpt-5.2"
+    tools: []
+    purpose: "hook/사실 팩트를 반영한 스크립트 후보 생성"
+
+  ScriptEvaluator:
+    provider: "openai"
+    model: "gpt-5.2-pro"
+    tools: []
+    purpose: "스크립트 후보 점수 평가 및 정책 하드 제약 검증"
+
+  ScriptSelector:
+    provider: "openai"
+    model: "gpt-5.2"
+    tools: []
+    purpose: "score spec 기반 L5 최종 스크립트 선택"
+
+  TranslationWriter:
+    provider: "openai"
+    model: "gpt-5.2"
+    tools: []
+    purpose: "선택 스크립트 포르투갈어 초안 생성"
+
+  TranslationCritic:
+    provider: "openai"
+    model: "gpt-5.2-pro"
+    tools: []
+    purpose: "번역 품질/정책 점검 및 구조화 문서 생성"
+
+  TranslationReconstructor:
+    provider: "openai"
+    model: "gpt-5.2"
+    tools: []
+    purpose: "수정 반영 최종 번역본 재구성 (HITL fallback)"
+
+  NarrationExtractor:
+    provider: "openai"
+    model: "gpt-5.2"
+    tools: []
+    purpose: "구조화 번역본에서 내레이션 전용 텍스트 추출"
+
+  StoryBibleBuilder:
+    provider: "openai"
+    model: "gpt-5.2"
+    tools: []
+    purpose: "L6 전역 컨텍스트(story bible) 생성"
+
+  StoryBibleEvaluator:
+    provider: "openai"
+    model: "gpt-5.2-pro"
+    tools: []
+    purpose: "story bible 품질/안전 검증"
+
+  StoryBibleSelector:
+    provider: "openai"
+    model: "gpt-5.2"
+    tools: []
+    purpose: "story bible 최종 선택"
+
+  BeatSplitter:
+    provider: "openai"
+    model: "gpt-5.2"
+    tools: []
+    purpose: "대본을 의미 단위 beat로 분해"
+
+  BeatEvaluator:
+    provider: "openai"
+    model: "gpt-5.2-pro"
+    tools: []
+    purpose: "beat 분해 품질 평가"
+
+  BeatSelector:
+    provider: "openai"
+    model: "gpt-5.2"
+    tools: []
+    purpose: "beat 분해 결과 선택"
+
+  SceneComposer:
+    provider: "openai"
+    model: "gpt-5.2"
+    tools: []
+    purpose: "beats를 씬 스켈레톤으로 조합"
+
+  SceneSplitCritic:
+    provider: "openai"
+    model: "gpt-5.2-pro"
+    tools: []
+    purpose: "scene split 제약 위반 평가"
+
+  SceneSplitSelector:
+    provider: "openai"
+    model: "gpt-5.2"
+    tools: []
+    purpose: "score spec 기반 scene split 선택"
+
+  ScenesJSONBuilder:
+    provider: "openai"
+    model: "gpt-5.2"
+    tools: []
+    purpose: "선택된 scene skeleton을 scenes_v2 계약으로 변환"
+
+  SceneContextPackager:
+    provider: "openai"
+    model: "gpt-5.2"
+    tools: []
+    purpose: "scene별 최소 컨텍스트 패키징"
+
+  SceneBriefAgent:
+    provider: "openai"
+    model: "gpt-5.2"
+    tools: []
+    purpose: "scene별 시각 brief 생성"
+
+  VisualPromptAgent:
+    provider: "openai"
+    model: "gpt-5.2"
+    tools: []
+    purpose: "scene별 image/video prompt 생성"
+
+  PromptValidator:
+    provider: "openai"
+    model: "gpt-5.2-pro"
+    tools: []
+    purpose: "prompt 정책/품질 하드 제약 검증"
+
+  PromptSelector:
+    provider: "openai"
+    model: "gpt-5.2"
+    tools: []
+    purpose: "score spec 기반 scene별 prompt 선택"
+
+  ContinuityAuditor:
+    provider: "openai"
+    model: "gpt-5.2-pro"
+    tools: []
+    purpose: "scene 간 캐릭터/스타일/오브젝트 일관성 감사"
+
+manual_change_log: []

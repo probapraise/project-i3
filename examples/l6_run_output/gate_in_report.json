@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0.0",
+  "gate": "in",
+  "manifest_path": "/home/dlwhdgus/project i3/examples/l6_run_output/gate_in_manifest.runtime.json",
+  "validated_at": "2026-02-06T04:46:04.431379+00:00",
+  "overall_status": "PASS",
+  "summary": {
+    "total": 3,
+    "passed": 3,
+    "failed": 0
+  },
+  "checks": [
+    {
+      "name": "session_input",
+      "artifact_path": "/home/dlwhdgus/project i3/examples/artifacts/sample_session_input_l6.json",
+      "schema_path": "/home/dlwhdgus/project i3/schemas/session_input.schema.json",
+      "status": "PASS",
+      "error_count": 0,
+      "errors": []
+    },
+    {
+      "name": "session_objective",
+      "artifact_path": "/home/dlwhdgus/project i3/examples/artifacts/sample_session_objective_l6_scene_plan.json",
+      "schema_path": "/home/dlwhdgus/project i3/schemas/session_objective.schema.json",
+      "status": "PASS",
+      "error_count": 0,
+      "errors": []
+    },
+    {
+      "name": "script_session_pack",
+      "artifact_path": "/home/dlwhdgus/project i3/examples/artifacts/sample_script_session_pack.json",
+      "schema_path": "/home/dlwhdgus/project i3/schemas/script_session_pack.schema.json",
+      "status": "PASS",
+      "error_count": 0,
+      "errors": []
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0.0",
+  "task_id": "hook_selection",
+  "created_at": "2026-02-06T04:04:43Z",
+  "candidates": [
+    {
+      "hook_id": "hook_001",
+      "hook_text": "He was a taxi driver, until one detail rewrote the entire case.",
+      "angle": "contradiction",
+      "trigger_words": [
+        "Mist\u00e9rio",
+        "Reviravolta"
+      ],
+      "source_claim_ids": [
+        "clm_001"
+      ]
+    },
+    {
+      "hook_id": "hook_002",
+      "hook_text": "This started as a normal report in Brazil, then the timeline cracked.",
+      "angle": "timeline_twist",
+      "trigger_words": [
+        "Linha do tempo"
+      ],
+      "source_claim_ids": [
+        "clm_001"
+      ]
+    },
+    {
+      "hook_id": "hook_003",
+      "hook_text": "Everyone accepted the first story. Then one clue changed everything.",
+      "angle": "investigation_shift",
+      "trigger_words": [
+        "Pista"
+      ],
+      "source_claim_ids": [
+        "clm_001"
+      ]
+    },
+    {
+      "hook_id": "hook_004",
+      "hook_text": "What if the most trusted version of the case was wrong?",
+      "angle": "curiosity_question",
+      "trigger_words": [
+        "D\u00favida"
+      ],
+      "source_claim_ids": [
+        "clm_001"
+      ]
+    },
+    {
+      "hook_id": "hook_005",
+      "hook_text": "Victim worked as a taxi driver.. But that is not what the final record suggests.",
+      "angle": "record_conflict",
+      "trigger_words": [
+        "Registro"
+      ],
+      "source_claim_ids": [
+        "clm_001"
+      ]
+    },
+    {
+      "hook_id": "hook_006",
+      "hook_text": "Brazil taxi driver true crime case 2025 looked simple. The reveal made viewers question every second.",
+      "angle": "loop_reveal",
+      "trigger_words": [
+        "Mist\u00e9rio",
+        "Reviravolta"
+      ],
+      "source_claim_ids": [
+        "clm_001"
+      ]
+    }
+  ]
+}

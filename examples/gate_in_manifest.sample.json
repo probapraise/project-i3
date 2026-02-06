@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0.0",
+  "gate": "in",
+  "artifacts": [
+    {
+      "name": "session_input",
+      "artifact_path": "artifacts/sample_session_input.json",
+      "schema_path": "../schemas/session_input.schema.json"
+    },
+    {
+      "name": "topic_intake_input",
+      "artifact_path": "artifacts/sample_topic_intake_input.json",
+      "schema_path": "../schemas/topic_intake_input.schema.json"
+    }
+  ]
+}

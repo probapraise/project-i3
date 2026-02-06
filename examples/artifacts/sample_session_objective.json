@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "session_id": "sess_l1_0001",
+  "objective_id": "obj_l1_research",
+  "created_at": "2026-02-06T12:00:00Z",
+  "objective_name": "L1 topic research and verification",
+  "success_criteria": [
+    "Produce topic_research_bundle",
+    "Verify claims with source references",
+    "Pass schema gates"
+  ],
+  "score_spec_ref": "score_specs/score_spec_topic_intake.json",
+  "policy_constraints": [
+    "No fabricated facts",
+    "Respect platform safety rules"
+  ]
+}

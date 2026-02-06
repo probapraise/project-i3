@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0.0",
+  "gate": "out",
+  "artifacts": [
+    {
+      "name": "session_output",
+      "artifact_path": "/home/dlwhdgus/project i3/examples/l6_run_output/session_output.json",
+      "schema_path": "/home/dlwhdgus/project i3/schemas/session_output.schema.json"
+    },
+    {
+      "name": "scenes_v2",
+      "artifact_path": "/home/dlwhdgus/project i3/examples/l6_run_output/scenes_v2.json",
+      "schema_path": "/home/dlwhdgus/project i3/schemas/scenes_v2.schema.json"
+    }
+  ]
+}

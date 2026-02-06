@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0.0",
+  "gate": "out",
+  "manifest_path": "/home/dlwhdgus/project i3/examples/l6_run_output/gate_out_manifest.runtime.json",
+  "validated_at": "2026-02-06T04:46:04.443480+00:00",
+  "overall_status": "PASS",
+  "summary": {
+    "total": 2,
+    "passed": 2,
+    "failed": 0
+  },
+  "checks": [
+    {
+      "name": "session_output",
+      "artifact_path": "/home/dlwhdgus/project i3/examples/l6_run_output/session_output.json",
+      "schema_path": "/home/dlwhdgus/project i3/schemas/session_output.schema.json",
+      "status": "PASS",
+      "error_count": 0,
+      "errors": []
+    },
+    {
+      "name": "scenes_v2",
+      "artifact_path": "/home/dlwhdgus/project i3/examples/l6_run_output/scenes_v2.json",
+      "schema_path": "/home/dlwhdgus/project i3/schemas/scenes_v2.schema.json",
+      "status": "PASS",
+      "error_count": 0,
+      "errors": []
+    }
+  ]
+}

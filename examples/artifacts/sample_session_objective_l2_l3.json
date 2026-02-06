@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0.0",
+  "session_id": "sess_l2l3_0001",
+  "objective_id": "obj_l2l3_profile",
+  "created_at": "2026-02-06T12:20:00Z",
+  "objective_name": "L2/L3 evidence structuring and inference completion",
+  "success_criteria": [
+    "Build entity_evidence_pack with REAL/NO_INFO tags",
+    "Fill NO_INFO with INFERRED values only",
+    "Apply lock rule REAL > INFERRED > NO_INFO"
+  ],
+  "score_spec_ref": "score_specs/score_spec_topic_intake.json",
+  "policy_constraints": [
+    "Do not overwrite REAL fields",
+    "No fabricated REAL tags"
+  ]
+}

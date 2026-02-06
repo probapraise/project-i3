@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "session_id": "sess_l6_0001",
+  "objective_id": "obj_l6_scene_plan",
+  "created_at": "2026-02-06T04:46:04Z",
+  "beats": [
+    {
+      "beat_id": "beat_001",
+      "text": "E se a primeira versao estivesse incompleta?",
+      "role": "hook",
+      "complexity": "low",
+      "source_claim_ids": [
+        "clm_001"
+      ]
+    },
+    {
+      "beat_id": "beat_002",
+      "text": "No Brasil, o caso de um taxista parecia simples.",
+      "role": "setup",
+      "complexity": "low",
+      "source_claim_ids": [
+        "clm_001"
+      ]
+    },
+    {
+      "beat_id": "beat_003",
+      "text": "Registros e relatos mostraram uma contradicao na linha do tempo.",
+      "role": "build",
+      "complexity": "low",
+      "source_claim_ids": [
+        "clm_001"
+      ]
+    },
+    {
+      "beat_id": "beat_004",
+      "text": "A evidencia final mudou a leitura do caso.",
+      "role": "payoff",
+      "complexity": "low",
+      "source_claim_ids": [
+        "clm_001"
+      ]
+    },
+    {
+      "beat_id": "beat_005",
+      "text": "Reveja a primeira frase e perceba o que mudou.",
+      "role": "loop",
+      "complexity": "low",
+      "source_claim_ids": [
+        "clm_001"
+      ]
+    }
+  ]
+}

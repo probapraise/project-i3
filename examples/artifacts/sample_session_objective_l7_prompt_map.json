@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0.0",
+  "session_id": "sess_l6_0001",
+  "objective_id": "obj_l6_scene_plan",
+  "created_at": "2026-02-06T15:00:00Z",
+  "objective_name": "L7 scene-level prompt map and continuity audit",
+  "success_criteria": [
+    "Generate per-scene prompt candidates",
+    "Select prompt per scene using score_spec_prompt",
+    "Run continuity audit and revise flagged scenes only",
+    "Export prompt_map_pack and Gate-Out PASS"
+  ],
+  "score_spec_ref": "score_specs/score_spec_prompt.json",
+  "policy_constraints": [
+    "Avoid explicit graphic descriptions",
+    "Keep scene continuity for characters and location",
+    "Use single model mapping in manual mode"
+  ]
+}
