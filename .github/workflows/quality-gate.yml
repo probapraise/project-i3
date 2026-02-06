@@ -1,8 +1,12 @@
 name: Quality Gate
 
+permissions:
+  contents: read
+
 on:
   push:
   pull_request:
+  workflow_dispatch:
 
 jobs:
   qa:
