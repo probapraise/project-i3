@@ -49,3 +49,4 @@ python3 "project i3/l8_downstream_asset_runner.py" \
 # probe
 # probe again
 # probe
+# visibility probe
