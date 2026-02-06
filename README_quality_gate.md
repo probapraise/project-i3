@@ -44,3 +44,16 @@ make golden-update
 ## CI
 
 GitHub Actions workflow: `.github/workflows/quality-gate.yml`
+
+Current triggers:
+
+- `pull_request` targeting `main`
+- `push` to `main`
+- `workflow_dispatch` (manual run)
+
+Required repository check name: `qa`
+
+Operational rule:
+
+- Do not edit workflow/documents directly on `main`.
+- Use a branch -> PR -> `qa` pass -> merge.
